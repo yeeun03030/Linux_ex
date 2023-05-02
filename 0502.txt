@@ -1,0 +1,252 @@
+root@yeeun-virtual-machine:~/바탕화면# vi /etc/passwd
+root@yeeun-virtual-machine:~/바탕화면# nano /etc/passwd
+root@yeeun-virtual-machine:~/바탕화면# nano /etc/shadow
+root@yeeun-virtual-machine:~/바탕화면# nano /etc/passwd
+root@yeeun-virtual-machine:~/바탕화면# nano /etc/group
+root@yeeun-virtual-machine:~/바탕화면# adduser yeeun1
+'yeeun1' 사용자를 추가 중...
+새 그룹 'yeeun1' (1001) 추가 ...
+새 사용자 'yeeun1' (1001) 을(를) 그룹 'yeeun1' (으)로 추가 ...
+'/home/yeeun1' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호 사전 검사에 실패했습니다 - 사전에 있는 단어를 기반으로 합니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+yeeun1의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: yeeuning
+	방 번호 []: 509
+	직장 전화번호 []: 02-333-5555
+	집 전화번호 []: 033-481-8809
+	기타 []: Student
+정보가 올바릅니까? [Y/n] Y
+root@yeeun-virtual-machine:~/바탕화면# nano /etc/passwd
+root@yeeun-virtual-machine:~/바탕화면# adduser --uid 1111 cookuser2
+'cookuser2' 사용자를 추가 중...
+새 그룹 'cookuser2' (1111) 추가 ...
+새 사용자 'cookuser2' (1111) 을(를) 그룹 'cookuser2' (으)로 추가 ...
+'/home/cookuser2' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호 사전 검사에 실패했습니다 - 사전에 있는 단어를 기반으로 합니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+cookuser2의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: cookingmama
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] Y
+root@yeeun-virtual-machine:~/바탕화면# adduser --gid 1000 cookuser3
+'cookuser3' 사용자를 추가 중...
+새 사용자 'cookuser3' (1002) 을(를) 그룹 'yeeun' (으)로 추가 ...
+'/home/cookuser3' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+cookuser3의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] Y
+root@yeeun-virtual-machine:~/바탕화면# nano /etc/passwd
+root@yeeun-virtual-machine:~/바탕화면# tail /etc/passwd 10
+==> /etc/passwd <==
+colord:x:123:130:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin
+geoclue:x:124:131::/var/lib/geoclue:/usr/sbin/nologin
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+yeeun:x:1000:1000:yeeun,,,:/home/yeeun:/bin/bash
+yeeun1:x:1001:1001:yeeuning,509,02-333-5555,033-481-8809,Student:/home/yeeun1:/bin/bash
+cookuser2:x:1111:1111:cookingmama,,,:/home/cookuser2:/bin/bash
+cookuser3:x:1002:1000:,,,:/home/cookuser3:/bin/bash
+tail: 읽기를 위해 '10'을(를) 열 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:~/바탕화면# adduser --home /newhome poly
+'poly' 사용자를 추가 중...
+새 그룹 'poly' (1002) 추가 ...
+새 사용자 'poly' (1003) 을(를) 그룹 'poly' (으)로 추가 ...
+'/newhome' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호 사전 검사에 실패했습니다 - 사전에 있는 단어를 기반으로 합니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+poly의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] Y
+root@yeeun-virtual-machine:~/바탕화면# login poly
+암호: 
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-35-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+poly@yeeun-virtual-machine:~$ logout
+root@yeeun-virtual-machine:~/바탕화면# adduser --shell /bin/csh/ poly1
+'poly1' 사용자를 추가 중...
+새 그룹 'poly1' (1003) 추가 ...
+새 사용자 'poly1' (1004) 을(를) 그룹 'poly1' (으)로 추가 ...
+useradd: Warning: missing or non-executable shell '/bin/csh/'
+'/home/poly1' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호 사전 검사에 실패했습니다 - 사전에 있는 단어를 기반으로 합니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+poly1의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] 
+root@yeeun-virtual-machine:~/바탕화면# nano /etc/passwd
+root@yeeun-virtual-machine:~/바탕화면# nano /etc/group
+root@yeeun-virtual-machine:~/바탕화면# passwd poly
+새 암호: 
+잘못된 비밀번호: 암호가 앞뒤 어느쪽에서 읽어도 같은 문맥입니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+root@yeeun-virtual-machine:~/바탕화면# login
+yeeun-virtual-machine 로그인: exit
+암호: 
+dajfldsjf
+
+로그인이 맞지 않습니다
+yeeun-virtual-machine 로그인: root
+암호: 
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-35-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+root@yeeun-virtual-machine:~# login ply
+암호: 
+
+로그인이 맞지 않습니다
+yeeun-virtual-machine 로그인: login poly
+암호: 
+
+로그인이 맞지 않습니다
+yeeun-virtual-machine 로그인: root
+암호: 
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-35-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+마지막 로그인: 화  5월  2 10:25:37 KST 2023 일시 pts/0
+root@yeeun-virtual-machine:~# usermod --shell /bin/csh poly
+root@yeeun-virtual-machine:~# usermod --groups yeeun1 poly
+root@yeeun-virtual-machine:~# nano /etc/passwd
+root@yeeun-virtual-machine:~# nano /etc/group
+root@yeeun-virtual-machine:~# tail /etc/passwd
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+yeeun:x:1000:1000:yeeun,,,:/home/yeeun:/bin/bash
+yeeun1:x:1001:1001:yeeuning,509,02-333-5555,033-481-8809,Student:/home/yeeun1:/bin/bash
+cookuser2:x:1111:1111:cookingmama,,,:/home/cookuser2:/bin/bash
+cookuser3:x:1002:1000:,,,:/home/cookuser3:/bin/bash
+poly:x:1003:1002:,,,:/newhome:/bin/csh
+poly1:x:1004:1003:,,,:/home/poly1:/bin/csh/
+root@yeeun-virtual-machine:~# ls /home
+cookuser2  cookuser3  poly1  t1.txt  t2.txt  yeeun  yeeun1
+root@yeeun-virtual-machine:~# ls /
+apple  cdrom  home   lib64       media  newhome  root  snap      sys        usr
+bin    dev    lib    libx32      melon  opt      run   srv       test1.txt  var
+boot   etc    lib32  lost+found  mnt    proc     sbin  swapfile  tmp
+root@yeeun-virtual-machine:~# userdel -r poly
+userdel: poly mail spool (/var/mail/poly) not found
+root@yeeun-virtual-machine:~# ls /home
+cookuser2  cookuser3  poly1  t1.txt  t2.txt  yeeun  yeeun1
+root@yeeun-virtual-machine:~# ls /
+apple  cdrom  home   lib64       media  opt   run   srv       test1.txt  var
+bin    dev    lib    libx32      melon  proc  sbin  swapfile  tmp
+boot   etc    lib32  lost+found  mnt    root  snap  sys       usr
+root@yeeun-virtual-machine:~# nano /etc/passwd
+root@yeeun-virtual-machine:~# 
