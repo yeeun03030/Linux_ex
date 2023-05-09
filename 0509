@@ -1,0 +1,26 @@
+09:00 ~ 09:50
+
+root@yeeun-virtual-machine:~# touch mydata.txt
+root@yeeun-virtual-machine:~# ls -l mydata.txt
+-rw-r--r-- 1 root root 0  5월  9 09:40 mydata.txt
+root@yeeun-virtual-machine:~# chmod 777 mydata.txt
+root@yeeun-virtual-machine:~# ls -l mydata.txt
+-rwxrwxrwx 1 root root 0  5월  9 09:40 mydata.txt
+root@yeeun-virtual-machine:~# chmod 644 mydata.txt
+root@yeeun-virtual-machine:~# ls -l mydata.txt
+-rw-r--r-- 1 root root 0  5월  9 09:40 mydata.txt
+root@yeeun-virtual-machine:~# chmod u+x mydata.txt
+root@yeeun-virtual-machine:~# ls -l mydata.txt
+-rwxr--r-- 1 root root 0  5월  9 09:40 mydata.txt
+root@yeeun-virtual-machine:~# chmod u-w mydata.txt
+root@yeeun-virtual-machine:~# ls -l mydata.txt
+-r-xr--r-- 1 root root 0  5월  9 09:40 mydata.txt
+root@yeeun-virtual-machine:~# chmod g+w mydata.txt
+root@yeeun-virtual-machine:~# ls -l mydata.txt
+-r-xrw-r-- 1 root root 0  5월  9 09:40 mydata.txt
+root@yeeun-virtual-machine:~# chmod o+x mydata.txt
+root@yeeun-virtual-machine:~# ls -l mydata.txt
+-r-xrw-r-x 1 root root 0  5월  9 09:40 mydata.txt
+root@yeeun-virtual-machine:~# 
+
+(쉬는시간)
