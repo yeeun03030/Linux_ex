@@ -24,3 +24,148 @@ root@yeeun-virtual-machine:~# ls -l mydata.txt
 root@yeeun-virtual-machine:~# 
 
 (쉬는시간)
+
+root@yeeun-virtual-machine:~# tail /etc/shadow
+nm-openvpn:*:19411:0:99999:7:::
+saned:*:19411:0:99999:7:::
+colord:*:19411:0:99999:7:::
+geoclue:*:19411:0:99999:7:::
+pulse:*:19411:0:99999:7:::
+gnome-initial-setup:*:19411:0:99999:7:::
+hplip:*:19411:0:99999:7:::
+gdm:*:19411:0:99999:7:::
+yeeun:$y$j9T$ejLKxlCIYrMebFuPqaCzw.$D3d0uN9K68piCoWXZWTg0jxoZXBD7tqCo8cRq5CjNO.:19430:0:99999:7:::
+poly1:$y$j9T$zx/8m2cGufXtC9pvfgBKW0$TbWRYRsmlUZxUF0gsZESr5KB2Q5/sP8rpNdymx6oHW9:19486:0:99999:7:::
+root@yeeun-virtual-machine:~# chown poly1 mydata.txt
+root@yeeun-virtual-machine:~# ls -l mydata.txt
+-r-xrw-r-x 1 poly1 root 0  5월  9 09:40 mydata.txt
+root@yeeun-virtual-machine:~# adduser poly2
+'poly2' 사용자를 추가 중...
+새 그룹 'poly2' (1002) 추가 ...
+새 사용자 'poly2' (1002) 을(를) 그룹 'poly2' (으)로 추가 ...
+'/home/poly2' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호가 없습니다
+새 암호 재입력: 
+암호를 입력하지 않았습니다.
+암호: 인증 토근 수정 오류
+passwd: 암호를 바꿨습니다
+다시 할까요? [y/N] 
+poly2의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] 
+root@yeeun-virtual-machine:~# chown poly2.poly2 mydata.txt
+root@yeeun-virtual-machine:~# ls -l mydata.txt
+-r-xrw-r-x 1 poly2 poly2 0  5월  9 09:40 mydata.txt
+root@yeeun-virtual-machine:~# adduser poly3
+'poly3' 사용자를 추가 중...
+새 그룹 'poly3' (1003) 추가 ...
+새 사용자 'poly3' (1003) 을(를) 그룹 'poly3' (으)로 추가 ...
+'/home/poly3' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+poly3의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] 
+root@yeeun-virtual-machine:~# 
+root@yeeun-virtual-machine:~# chgrp poly3 mydata.txt
+root@yeeun-virtual-machine:~# ls -l mydata.txt
+-r-xrw-r-x 1 poly2 poly3 0  5월  9 09:40 mydata.txt
+root@yeeun-virtual-machine:~# groups poly3
+poly3 : poly3
+root@yeeun-virtual-machine:~# vi sample
+root@yeeun-virtual-machine:~# vi sample
+root@yeeun-virtual-machine:~# ls -l sample
+-rw-r--r-- 1 root root 94  5월  9 10:16 sample
+root@yeeun-virtual-machine:~# chmod u+x sample
+root@yeeun-virtual-machine:~# ls -l sample
+-rwxr--r-- 1 root root 94  5월  9 10:16 sample
+root@yeeun-virtual-machine:~# sample
+명령어 'sample' 을(를) 찾을 수 없습니다. 그러나 다음을 통해 설치할 수 있습니다:
+apt install barcode
+root@yeeun-virtual-machine:~# ./sample
+./sample: 줄 1: a: 명령어를 찾을 수 없음
+./sample: 줄 2: 리눅스: 명령어를 찾을 수 없음
+./sample: 줄 3: 파일: 명령어를 찾을 수 없음
+backups  crash	local  log   metrics  run   spool
+cache	 lib	lock   mail  opt      snap  tmp
+root@yeeun-virtual-machine:~# adduser ubuntu
+'ubuntu' 사용자를 추가 중...
+새 그룹 'ubuntu' (1004) 추가 ...
+새 사용자 'ubuntu' (1004) 을(를) 그룹 'ubuntu' (으)로 추가 ...
+'/home/ubuntu' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+ubuntu의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] 
+root@yeeun-virtual-machine:~# 
+root@yeeun-virtual-machine:~# ls -l sample
+-rwxr--r-- 1 root root 94  5월  9 10:16 sample
+root@yeeun-virtual-machine:~# chown yeeun sample
+root@yeeun-virtual-machine:~# ls -l sample
+-rwxr--r-- 1 yeeun root 94  5월  9 10:16 sample
+root@yeeun-virtual-machine:~# chown yeeun.yeeun sample
+root@yeeun-virtual-machine:~# ls -l sample
+-rwxr--r-- 1 yeeun yeeun 94  5월  9 10:16 sample
+root@yeeun-virtual-machine:~# chmod g+x sample
+root@yeeun-virtual-machine:~# chmod g-x sample
+root@yeeun-virtual-machine:~# chmod 754 sample
+root@yeeun-virtual-machine:~# ls -l sample
+-rwxr-xr-- 1 yeeun yeeun 94  5월  9 10:16 sample
+root@yeeun-virtual-machine:~# su - yeeun
+yeeun@yeeun-virtual-machine:~$ pwd
+/home/yeeun
+yeeun@yeeun-virtual-machine:~$ ls -l /root/sample
+ls: '/root/sample'에 접근할 수 없음: 허가 거부
+yeeun@yeeun-virtual-machine:~$ ls -l sample
+ls: 'sample'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+yeeun@yeeun-virtual-machine:~$ ls -ld /root
+drwx------ 14 root root 4096  5월  9 10:16 /root
+yeeun@yeeun-virtual-machine:~$ logout
+root@yeeun-virtual-machine:~# logout
+bash: logout: 로그인 셸이 아님: `exit'를 사용하십시오
+root@yeeun-virtual-machine:~# mv sample ~yeeun
+root@yeeun-virtual-machine:~# su - yeeun
+yeeun@yeeun-virtual-machine:~$ pwd
+/home/yeeun
+yeeun@yeeun-virtual-machine:~$ ls -ld /home/yeeun
+drwxr-x--- 16 yeeun yeeun 4096  5월  9 10:39 /home/yeeun
+yeeun@yeeun-virtual-machine:~$ chmod 777 sample
+yeeun@yeeun-virtual-machine:~$ ls -l sample
+-rwxrwxrwx 1 yeeun yeeun 94  5월  9 10:16 sample
+yeeun@yeeun-virtual-machine:~$ chown root.root sample
+chown: 'sample'의 소유권 바꾸는 중: 명령을 허용하지 않음
+yeeun@yeeun-virtual-machine:~$ logout
+root@yeeun-virtual-machine:~# ^C
+root@yeeun-virtual-machine:~# mkdir linkdir
+root@yeeun-virtual-machine:~# cd linkdir/
+root@yeeun-virtual-machine:~/linkdir# vi originalfile
+root@yeeun-virtual-machine:~/linkdir# cat originalfile
+root@yeeun-virtual-machine:~/linkdir# vi originalfile
+root@yeeun-virtual-machine:~/linkdir# cat originalfile
+
+링크시킬 원본 파일을 작성합니다.
+root@yeeun-virtual-machine:~/linkdir# 
