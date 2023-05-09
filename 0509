@@ -1,4 +1,4 @@
-09:00 ~ 09:50
+
 
 root@yeeun-virtual-machine:~# touch mydata.txt
 root@yeeun-virtual-machine:~# ls -l mydata.txt
@@ -23,7 +23,6 @@ root@yeeun-virtual-machine:~# ls -l mydata.txt
 -r-xrw-r-x 1 root root 0  5월  9 09:40 mydata.txt
 root@yeeun-virtual-machine:~# 
 
-(쉬는시간)
 
 root@yeeun-virtual-machine:~# tail /etc/shadow
 nm-openvpn:*:19411:0:99999:7:::
@@ -169,3 +168,161 @@ root@yeeun-virtual-machine:~/linkdir# cat originalfile
 
 링크시킬 원본 파일을 작성합니다.
 root@yeeun-virtual-machine:~/linkdir# 
+
+
+root@yeeun-virtual-machine:~/linkdir# ls
+originalfile
+root@yeeun-virtual-machine:~/linkdir# ln originafile hardlink
+ln: 'originafile' 접근 실패: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:~/linkdir# ln -s originafile softlink
+root@yeeun-virtual-machine:~/linkdir# ln originafile
+ln: 'originafile' 접근 실패: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:~/linkdir# ls -il
+합계 4
+545356 -rw-r--r-- 1 root root 48  5월  9 10:51 originalfile
+545354 lrwxrwxrwx 1 root root 11  5월  9 11:10 softlink -> originafile
+root@yeeun-virtual-machine:~/linkdir# ls -l originalfile
+-rw-r--r-- 1 root root 48  5월  9 10:51 originalfile
+root@yeeun-virtual-machine:~/linkdir# mv originafile ../
+mv: 'originafile' 상태 정보 확인 불가: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:~/linkdir# ls
+originalfile  softlink
+root@yeeun-virtual-machine:~/linkdir# mv originafile ../
+mv: 'originafile' 상태 정보 확인 불가: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:~/linkdir# cat hardlink
+cat: hardlink: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:~/linkdir# ln originafile hardlink
+ln: 'originafile' 접근 실패: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:~/linkdir# ln originalfile hardlink
+root@yeeun-virtual-machine:~/linkdir# ln -s originalfile hardlink
+ln: 'hardlink' 심볼릭 링크 만들기 실패: 파일이 있습니다
+root@yeeun-virtual-machine:~/linkdir# ln -s originalfile softlink
+ln: 'softlink' 심볼릭 링크 만들기 실패: 파일이 있습니다
+root@yeeun-virtual-machine:~/linkdir# ls -il
+합계 8
+545356 -rw-r--r-- 2 root root 48  5월  9 10:51 hardlink
+545356 -rw-r--r-- 2 root root 48  5월  9 10:51 originalfile
+545354 lrwxrwxrwx 1 root root 11  5월  9 11:10 softlink -> originafile
+root@yeeun-virtual-machine:~/linkdir# cat hardlink
+
+링크시킬 원본 파일을 작성합니다.
+root@yeeun-virtual-machine:~/linkdir# cat softlink
+cat: softlink: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:~/linkdir# ln
+ln: 파일 피연산자 빠짐
+자세한 정보는 'ln --help'를 입력하십시오.
+root@yeeun-virtual-machine:~/linkdir# ls
+hardlink  originalfile  softlink
+root@yeeun-virtual-machine:~/linkdir# cat softlink
+cat: softlink: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:~/linkdir# cd
+root@yeeun-virtual-machine:~# ls -il originalfile
+ls: 'originalfile'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:~# mv originalfile ./linkdir
+mv: 'originalfile' 상태 정보 확인 불가: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:~# ls
+linkdir     snap  다운로드  바탕화면  사진  템플릿
+mydata.txt  공개  문서      비디오    음악
+root@yeeun-virtual-machine:~# cd /linkdir
+bash: cd: /linkdir: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:~# cd linkdir/
+root@yeeun-virtual-machine:~/linkdir# mv originalfile ./linkdir
+root@yeeun-virtual-machine:~/linkdir# ls
+hardlink  linkdir  softlink
+root@yeeun-virtual-machine:~/linkdir# cat softlink
+cat: softlink: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:~/linkdir# ln -s originalfile softlink
+ln: 'softlink' 심볼릭 링크 만들기 실패: 파일이 있습니다
+root@yeeun-virtual-machine:~/linkdir# ls -il
+합계 8
+545356 -rw-r--r-- 2 root root 48  5월  9 10:51 hardlink
+545356 -rw-r--r-- 2 root root 48  5월  9 10:51 linkdir
+545354 lrwxrwxrwx 1 root root 11  5월  9 11:10 softlink -> originafile
+root@yeeun-virtual-machine:~/linkdir# cat softlink
+cat: softlink: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:~/linkdir# mv originalfile ../
+mv: 'originalfile' 상태 정보 확인 불가: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:~/linkdir# ../
+bash: ../: 디렉터리입니다
+root@yeeun-virtual-machine:~/linkdir# cd
+root@yeeun-virtual-machine:~# ls
+linkdir     snap  다운로드  바탕화면  사진  템플릿
+mydata.txt  공개  문서      비디오    음악
+root@yeeun-virtual-machine:~# cd linkdir/
+root@yeeun-virtual-machine:~/linkdir# vi originalfile
+root@yeeun-virtual-machine:~/linkdir# ls
+hardlink  linkdir  originalfile  softlink
+root@yeeun-virtual-machine:~/linkdir# 
+root@yeeun-virtual-machine:~/linkdir# cat originalfile
+파일 링크 실습용 원본 파일
+root@yeeun-virtual-machine:~/linkdir# ln originalfile hardlink
+ln: 'hardlink' 하드 링크 만들기 실패: 파일이 있습니다
+root@yeeun-virtual-machine:~/linkdir# rm softlink
+root@yeeun-virtual-machine:~/linkdir# ls
+hardlink  linkdir  originalfile
+root@yeeun-virtual-machine:~/linkdir# rm linkdir
+root@yeeun-virtual-machine:~/linkdir# rm hardlink
+root@yeeun-virtual-machine:~/linkdir# ls
+originalfile
+root@yeeun-virtual-machine:~/linkdir# ln originalfile hardlink
+root@yeeun-virtual-machine:~/linkdir# ln -s originalfile softlink
+root@yeeun-virtual-machine:~/linkdir# ls
+hardlink  originalfile  softlink
+root@yeeun-virtual-machine:~/linkdir# ls -il
+합계 8
+545358 -rw-r--r-- 2 root root 38  5월  9 11:20 hardlink
+545358 -rw-r--r-- 2 root root 38  5월  9 11:20 originalfile
+545354 lrwxrwxrwx 1 root root 12  5월  9 11:22 softlink -> originalfile
+root@yeeun-virtual-machine:~/linkdir# cat hardlink
+파일 링크 실습용 원본 파일
+root@yeeun-virtual-machine:~/linkdir# cat softlink
+파일 링크 실습용 원본 파일
+root@yeeun-virtual-machine:~/linkdir# mv originalfile ../
+root@yeeun-virtual-machine:~/linkdir# ls -il
+합계 4
+545358 -rw-r--r-- 2 root root 38  5월  9 11:20 hardlink
+545354 lrwxrwxrwx 1 root root 12  5월  9 11:22 softlink -> originalfile
+root@yeeun-virtual-machine:~/linkdir# ls
+hardlink  softlink
+root@yeeun-virtual-machine:~/linkdir# cat hardlink
+파일 링크 실습용 원본 파일
+root@yeeun-virtual-machine:~/linkdir# cat softlink
+cat: softlink: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:~/linkdir# ls
+hardlink  softlink
+root@yeeun-virtual-machine:~/linkdir# cd ../
+root@yeeun-virtual-machine:~# ls
+linkdir     originalfile  공개      문서      비디오  음악
+mydata.txt  snap          다운로드  바탕화면  사진    템플릿
+root@yeeun-virtual-machine:~# mv originalfile ./linkdir/
+root@yeeun-virtual-machine:~# ls
+linkdir     snap  다운로드  바탕화면  사진  템플릿
+mydata.txt  공개  문서      비디오    음악
+root@yeeun-virtual-machine:~# cd linkdir
+root@yeeun-virtual-machine:~/linkdir# ls
+hardlink  originalfile  softlink
+root@yeeun-virtual-machine:~/linkdir# 
+
+
+[ 무한루프 테스트 ]
+
+root@yeeun-virtual-machine:~/linkdir# yes > /dev/null
+cd
+cd
+cd
+죽었음
+root@yeeun-virtual-machine:~/linkdir# cd
+root@yeeun-virtual-machine:~# cd
+root@yeeun-virtual-machine:~# cd
+root@yeeun-virtual-machine:~# 
+
+[ 새 창 열고 저거 죽이기 ]
+root@yeeun-virtual-machine:~# ps -ef|grep 
+사용법: grep [<옵션>]... <패턴> [<파일>]...
+자세한 정보는 'grep --help'를 입력하십시오.
+root@yeeun-virtual-machine:~# ps -ef|grep yes
+root        2827    2007 99 11:37 pts/0    00:01:29 yes
+root        2850    2835  0 11:39 pts/1    00:00:00 grep --color=auto yes
+root@yeeun-virtual-machine:~# kill -9 2827
+root@yeeun-virtual-machine:~# 
+
