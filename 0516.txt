@@ -1,0 +1,33 @@
+root@yeeun-virtual-machine:~# yes > /dev/null
+죽었음
+root@yeeun-virtual-machine:~# yes > /dev/null
+^Z
+[1]+  멈춤                  yes > /dev/null
+root@yeeun-virtual-machine:~# bg
+[1]+ yes > /dev/null &
+root@yeeun-virtual-machine:~# jobs
+[1]+  실행중               yes > /dev/null &
+root@yeeun-virtual-machine:~# fg 1
+yes > /dev/null
+^Z    
+[1]+  멈춤                  yes > /dev/null
+root@yeeun-virtual-machine:~# ps -ef|grep yes
+root        2927    2877 69 09:41 pts/0    00:01:28 yes
+root        2935    2877  0 09:43 pts/0    00:00:00 grep --color=auto yes
+root@yeeun-virtual-machine:~# kill -9 2927
+root@yeeun-virtual-machine:~# yes > /dev/null
+^Z[1]   죽었음               yes > /dev/null
+
+[2]+  멈춤                  yes > /dev/null
+root@yeeun-virtual-machine:~# ^C
+root@yeeun-virtual-machine:~# jobs
+[2]+  멈춤                  yes > /dev/null
+root@yeeun-virtual-machine:~# fg 2
+yes > /dev/null
+^C
+root@yeeun-virtual-machine:~# nano
+root@yeeun-virtual-machine:~# nano &
+[1] 2940
+root@yeeun-virtual-machine:~# fg 1
+nano
+root@yeeun-virtual-machine:~# 
