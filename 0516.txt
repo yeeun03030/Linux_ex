@@ -210,3 +210,227 @@ root@yeeun-virtual-machine:~/다운로드# google-chrome
 root@yeeun-virtual-machine:~/다운로드# bg 1 
 [1]+ google-chrome &
 root@yeeun-virtual-machine:~/다운로드# 
+
+root@yeeun-virtual-machine:~/바탕화면# cd ..
+root@yeeun-virtual-machine:~# cd /다운로드
+bash: cd: /다운로드: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:~# ls
+linkdir     snap  다운로드  바탕화면  사진  템플릿
+mydata.txt  공개  문서      비디오    음악
+root@yeeun-virtual-machine:~# cd 다운로드/
+root@yeeun-virtual-machine:~/다운로드# dpkg -l google
+dpkg-query: google와 일치하는 패키지를 찾지 못했습니다
+root@yeeun-virtual-machine:~/다운로드# dpkg --info google
+dpkg-deb: 오류: `google' 아카이브를 읽는데 실패했습니다: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:~/다운로드# dpkg --info google.deb
+dpkg-deb: 오류: `google.deb' 아카이브를 읽는데 실패했습니다: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:~/다운로드# google
+명령어 'google' 을(를) 찾을 수 없습니다. 다음 명령어로 시도하시겠습니까:
+  deb googlergoogler의 명령어 ' (4.3.2-1)'
+  deb hooglehoogle의 명령어 ' (5.0.18.1+dfsg1-2build1)'
+Try: apt install <deb name>
+root@yeeun-virtual-machine:~/다운로드# wget http://archive.ubuntu.com/ubuntu/pool/universe/m/mc/mc_4.8.28-1_amd64.deb
+--2023-05-16 11:16:05--  http://archive.ubuntu.com/ubuntu/pool/universe/m/mc/mc_4.8.28-1_amd64.deb
+archive.ubuntu.com (archive.ubuntu.com) 해석 중... 185.125.190.39, 91.189.91.38, 91.189.91.39, ...
+다음으로 연결 중: archive.ubuntu.com (archive.ubuntu.com)|185.125.190.39|:80... 연결했습니다.
+HTTP 요청을 보냈습니다. 응답 기다리는 중... 200 OK
+길이: 540062 (527K) [application/x-debian-package]
+저장 위치: ‘mc_4.8.28-1_amd64.deb’
+
+mc_4.8.28-1_amd64.d 100%[===================>] 527.40K   382KB/s    / 1.4s     
+
+2023-05-16 11:16:08 (382 KB/s) - ‘mc_4.8.28-1_amd64.deb’ 저장함 [540062/540062]
+
+root@yeeun-virtual-machine:~/다운로드# ls
+google-chrome-stable_current_amd64.deb  mc_4.8.28-1_amd64.deb
+mc-data_4.8.28-1_all.deb
+root@yeeun-virtual-machine:~/다운로드# wget http://archive.ubuntu.com/ubuntu/pool/universe/n/ncftp/ncftp_3.2.6-1_amd64.deb
+--2023-05-16 11:19:04--  http://archive.ubuntu.com/ubuntu/pool/universe/n/ncftp/ncftp_3.2.6-1_amd64.deb
+archive.ubuntu.com (archive.ubuntu.com) 해석 중... 185.125.190.36, 91.189.91.38, 185.125.190.39, ...
+다음으로 연결 중: archive.ubuntu.com (archive.ubuntu.com)|185.125.190.36|:80... 연결했습니다.
+HTTP 요청을 보냈습니다. 응답 기다리는 중... 200 OK
+길이: 338438 (331K) [application/x-debian-package]
+저장 위치: ‘ncftp_3.2.6-1_amd64.deb’
+
+ncftp_3.2.6-1_amd64 100%[===================>] 330.51K   280KB/s    / 1.2s     
+
+2023-05-16 11:19:06 (280 KB/s) - ‘ncftp_3.2.6-1_amd64.deb’ 저장함 [338438/338438]
+
+root@yeeun-virtual-machine:~/다운로드# ls
+google-chrome-stable_current_amd64.deb  mc_4.8.28-1_amd64.deb
+mc-data_4.8.28-1_all.deb                ncftp_3.2.6-1_amd64.deb
+root@yeeun-virtual-machine:~/다운로드# dpkg -l ncftp
+희망상태=알수없음(U)/설치(I)/지우기(R)/깨끗이(P)/고정(H)
+| 상태=아님(N)/설치(I)/설정(C)/풀림(U)/절반설정(F)/일부설치(H)/트리거대기(W)/
+| /    트리거밀림(T)
+|/ 오류?=(없음)/다시설치필요(R) (상태, 오류가 대문자=불량)
+||/ 이름           버전         Architecture 설명
++++-==============-============-============-=================================
+un  ncftp          <none>       <none>       (설명 없음)
+root@yeeun-virtual-machine:~/다운로드# dpkg --info ncftp.deb
+dpkg-deb: 오류: `ncftp.deb' 아카이브를 읽는데 실패했습니다: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:~/다운로드# dpkg --info ncftp_3.2.6-1_amd64.deb 
+ new Debian package, version 2.0.
+ size 338438 bytes: control archive=1292 bytes.
+     588 바이트,    14 줄      control              
+    1194 바이트,    19 줄      md5sums              
+     201 바이트,    10 줄   *  postinst             #!/bin/sh
+     115 바이트,    13 줄   *  prerm                #!/bin/sh
+ Package: ncftp
+ Version: 2:3.2.6-1
+ Architecture: amd64
+ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+ Original-Maintainer: Noël Köthe <noel@debian.org>
+ Installed-Size: 1122
+ Depends: libc6 (>= 2.34), libncurses6 (>= 6), libtinfo6 (>= 6)
+ Section: net
+ Priority: optional
+ Homepage: https://www.ncftp.com/ncftp/
+ Description: User-friendly and well-featured FTP client
+  Ncftp allows a user to transfer files to and from a remote network
+  site, and offers additional features that are not found in the standard
+  interface, ftp. This version has Readline support enabled.
+root@yeeun-virtual-machine:~/다운로드# dpkg -i ncftp_3.2.6-1_amd64.deb
+Selecting previously unselected package ncftp.
+(데이터베이스 읽는중 ...현재 202277개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack ncftp_3.2.6-1_amd64.deb ...
+Unpacking ncftp (2:3.2.6-1) ...
+ncftp (2:3.2.6-1) 설정하는 중입니다 ...
+update-alternatives: using /usr/bin/ncftp3 to provide /usr/bin/ncftp (ncftp) in auto mode
+Processing triggers for man-db (2.10.2-1) ...
+root@yeeun-virtual-machine:~/다운로드# dpkg -l ncftp
+희망상태=알수없음(U)/설치(I)/지우기(R)/깨끗이(P)/고정(H)
+| 상태=아님(N)/설치(I)/설정(C)/풀림(U)/절반설정(F)/일부설치(H)/트리거대기(W)/
+| /    트리거밀림(T)
+|/ 오류?=(없음)/다시설치필요(R) (상태, 오류가 대문자=불량)
+||/ 이름           버전         Architecture 설명
++++-==============-============-============-==================================>
+ii  ncftp          2:3.2.6-1    amd64        User-friendly and well-featured FT>
+lines 1-7/7 (END)
+[1]+  멈춤                  dpkg -l ncftp
+root@yeeun-virtual-machine:~/다운로드# ncftp
+NcFTP 3.2.6 (Dec 04, 2016) by Mike Gleason (http://www.NcFTP.com/contact/).
+
+Copyright (c) 1992-2016 by Mike Gleason.
+All rights reserved.
+
+ncftp> open ftp.ubuntu.com
+Connecting to 185.125.190.39...                                                 
+FTP server (vsftpd)
+Logging in...                                                                   
+Login successful.
+Logged in to ftp.ubuntu.com.                                                    
+ncftp / > ls
+cdimage/                  maas-images/              ubuntu/
+cloud-images/             old-images/               ubuntu-cloud-archive/
+extras/                   releases/                 ubuntu-ports/
+lxc-images/               simple-streams/
+ncftp / > cd ubuntu
+Directory successfully changed.
+ncftp /ubuntu > cd pool
+Directory successfully changed.
+ncftp /ubuntu/pool > ls
+main/        multiverse/  restricted/  universe/
+ncftp /ubuntu/pool > cd universe
+Directory successfully changed.
+ncftp /ubuntu/pool/universe > ls
+0/     9/     f/     l/     libd/  libj/  libp/  libv/  n/     t/     z/
+2/     a/     g/     lib2/  libe/  libk/  libq/  libw/  o/     u/
+3/     b/     h/     lib3/  libf/  libl/  libr/  libx/  p/     v/
+4/     c/     i/     liba/  libg/  libm/  libs/  liby/  q/     w/
+6/     d/     j/     libb/  libh/  libn/  libt/  libz/  r/     x/
+7/     e/     k/     libc/  libi/  libo/  libu/  m/     s/     y/
+ncftp /ubuntu/pool/universe > cd n
+Directory successfully changed.
+ncftp /ubuntu/pool/universe/n > cd ncftp
+Directory successfully changed.
+ncftp .../pool/universe/n/ncftp > ls
+ncftp_3.2.5-1.1.diff.gz                ncftp_3.2.5-2.2.dsc
+ncftp_3.2.5-1.1.dsc                    ncftp_3.2.5-2.2_amd64.deb
+ncftp_3.2.5-1.1_amd64.deb              ncftp_3.2.5-2.debian.tar.xz
+ncftp_3.2.5-1.1_i386.deb               ncftp_3.2.5-2.dsc
+ncftp_3.2.5-1.1build1.diff.gz          ncftp_3.2.5-2_amd64.deb
+ncftp_3.2.5-1.1build1.dsc              ncftp_3.2.5-2_i386.deb
+ncftp_3.2.5-1.1build1_amd64.deb        ncftp_3.2.5.orig.tar.gz
+ncftp_3.2.5-1.1build1_i386.deb         ncftp_3.2.6-1.debian.tar.xz
+ncftp_3.2.5-2.1.debian.tar.xz          ncftp_3.2.6-1.dsc
+ncftp_3.2.5-2.1.dsc                    ncftp_3.2.6-1_amd64.deb
+ncftp_3.2.5-2.1_amd64.deb              ncftp_3.2.6.orig.tar.gz
+ncftp_3.2.5-2.2.debian.tar.xz
+ncftp .../pool/universe/n/ncftp > exit
+root@yeeun-virtual-machine:~/다운로드# dpkg -r ncftp
+(데이터베이스 읽는중 ...현재 202297개의 파일과 디렉터리가 설치되어 있습니다.)
+ncftp (2:3.2.6-1)를 제거합니다...
+Processing triggers for man-db (2.10.2-1) ...
+root@yeeun-virtual-machine:~/다운로드# dpkg -i mc
+mc-data_4.8.28-1_all.deb  mc_4.8.28-1_amd64.deb     
+root@yeeun-virtual-machine:~/다운로드# dpkg -i mc
+mc-data_4.8.28-1_all.deb  mc_4.8.28-1_amd64.deb     
+root@yeeun-virtual-machine:~/다운로드# dpkg -i mc
+mc-data_4.8.28-1_all.deb  mc_4.8.28-1_amd64.deb     
+root@yeeun-virtual-machine:~/다운로드# dpkg -i mc_4.8.28-1_amd64.deb 
+Selecting previously unselected package mc.
+(데이터베이스 읽는중 ...현재 202277개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack mc_4.8.28-1_amd64.deb ...
+Unpacking mc (3:4.8.28-1) ...
+dpkg: 종속성 문제로 mc의 구성이 차단되었습니다:
+ mc 패키지는 다음 패키지에 의존: libssh2-1 (>= 1.2.8): 하지만:
+  libssh2-1 패키지는 설치하지 않았습니다.
+ mc 패키지는 다음 패키지에 의존: mc-data (= 3:4.8.28-1): 하지만:
+  mc-data 패키지는 설치하지 않았습니다.
+
+dpkg: error processing package mc (--install):
+ 의존성 문제 - 설정하지 않고 남겨둠
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+처리하는데 오류가 발생했습니다:
+ mc
+root@yeeun-virtual-machine:~/다운로드# dpkg -l mc
+희망상태=알수없음(U)/설치(I)/지우기(R)/깨끗이(P)/고정(H)
+| 상태=아님(N)/설치(I)/설정(C)/풀림(U)/절반설정(F)/일부설치(H)/트리거대기(W)/
+| /    트리거밀림(T)
+|/ 오류?=(없음)/다시설치필요(R) (상태, 오류가 대문자=불량)
+||/ 이름           버전         Architecture 설명
++++-==============-============-============-==================================>
+iU  mc             3:4.8.28-1   amd64        Midnight Commander - a powerful fi>
+...skipping...
+희망상태=알수없음(U)/설치(I)/지우기(R)/깨끗이(P)/고정(H)
+| 상태=아님(N)/설치(I)/설정(C)/풀림(U)/절반설정(F)/일부설치(H)/트리거대기(W)/
+| /    트리거밀림(T)
+|/ 오류?=(없음)/다시설치필요(R) (상태, 오류가 대문자=불량)
+||/ 이름           버전         Architecture 설명
++++-==============-============-============-==================================>
+iU  mc             3:4.8.28-1   amd64        Midnight Commander - a powerful fi>
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-7/7 (END)
+[2]+  멈춤                  dpkg -l mc
+root@yeeun-virtual-machine:~/다운로드# dpkg -r mc
+(데이터베이스 읽는중 ...현재 202379개의 파일과 디렉터리가 설치되어 있습니다.)
+mc (3:4.8.28-1)를 제거합니다...
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+root@yeeun-virtual-machine:~/다운로드# ls
+google-chrome-stable_current_amd64.deb  mc_4.8.28-1_amd64.deb
+mc-data_4.8.28-1_all.deb                ncftp_3.2.6-1_amd64.deb
+root@yeeun-virtual-machine:~/다운로드# rm mc-data_4.8.28-1_all.deb 
+root@yeeun-virtual-machine:~/다운로드# ls
+google-chrome-stable_current_amd64.deb  ncftp_3.2.6-1_amd64.deb
+mc_4.8.28-1_amd64.deb
+root@yeeun-virtual-machine:~/다운로드#
