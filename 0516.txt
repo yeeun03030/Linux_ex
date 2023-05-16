@@ -31,3 +31,182 @@ root@yeeun-virtual-machine:~# nano &
 root@yeeun-virtual-machine:~# fg 1
 nano
 root@yeeun-virtual-machine:~# 
+
+root@yeeun-virtual-machine:~# cd /lib/systemd/system
+root@yeeun-virtual-machine:/lib/systemd/system# ls *.service
+ModemManager.service                    rescue.service
+NetworkManager-dispatcher.service       rsync.service
+NetworkManager-wait-online.service      rsyslog.service
+NetworkManager.service                  rtkit-daemon.service
+accounts-daemon.service                 saned.service
+acpid.service                           saned@.service
+alsa-restore.service                    secureboot-db.service
+alsa-state.service                      serial-getty@.service
+alsa-utils.service                      setvtrgb.service
+anacron.service                         snapd.aa-prompt-listener.service
+apparmor.service                        snapd.apparmor.service
+apport-autoreport.service               snapd.autoimport.service
+apport-forward@.service                 snapd.core-fixup.service
+apt-daily-upgrade.service               snapd.failure.service
+apt-daily.service                       snapd.recovery-chooser-trigger.service
+apt-news.service                        snapd.seeded.service
+autovt@.service                         snapd.service
+avahi-daemon.service                    snapd.snap-repair.service
+bluetooth.service                       snapd.system-shutdown.service
+bolt.service                            speech-dispatcherd.service
+brltty-udev.service                     spice-vdagent.service
+brltty.service                          spice-vdagentd.service
+colord.service                          switcheroo-control.service
+configure-printer@.service              system-update-cleanup.service
+console-getty.service                   systemd-ask-password-console.service
+console-setup.service                   systemd-ask-password-plymouth.service
+container-getty@.service                systemd-ask-password-wall.service
+cron.service                            systemd-backlight@.service
+cryptdisks-early.service                systemd-binfmt.service
+cryptdisks.service                      systemd-bless-boot.service
+cups-browsed.service                    systemd-boot-check-no-failures.service
+cups.service                            systemd-boot-system-token.service
+dbus-org.freedesktop.hostname1.service  systemd-exit.service
+dbus-org.freedesktop.locale1.service    systemd-fsck-root.service
+dbus-org.freedesktop.login1.service     systemd-fsck@.service
+dbus-org.freedesktop.timedate1.service  systemd-fsckd.service
+dbus.service                            systemd-halt.service
+debug-shell.service                     systemd-hibernate-resume@.service
+dmesg.service                           systemd-hibernate.service
+dpkg-db-backup.service                  systemd-hostnamed.service
+e2scrub@.service                        systemd-hybrid-sleep.service
+e2scrub_all.service                     systemd-initctl.service
+e2scrub_fail@.service                   systemd-journal-flush.service
+e2scrub_reap.service                    systemd-journald.service
+emergency.service                       systemd-journald@.service
+esm-cache.service                       systemd-kexec.service
+fprintd.service                         systemd-localed.service
+friendly-recovery.service               systemd-logind.service
+fstrim.service                          systemd-machine-id-commit.service
+fwupd-offline-update.service            systemd-modules-load.service
+fwupd-refresh.service                   systemd-network-generator.service
+fwupd.service                           systemd-networkd-wait-online.service
+gdm.service                             systemd-networkd.service
+gdm3.service                            systemd-oomd.service
+geoclue.service                         systemd-poweroff.service
+getty-static.service                    systemd-pstore.service
+getty@.service                          systemd-quotacheck.service
+gpu-manager.service                     systemd-random-seed.service
+grub-common.service                     systemd-reboot.service
+grub-initrd-fallback.service            systemd-remount-fs.service
+hwclock.service                         systemd-resolved.service
+iio-sensor-proxy.service                systemd-rfkill.service
+initrd-cleanup.service                  systemd-suspend-then-hibernate.service
+initrd-parse-etc.service                systemd-suspend.service
+initrd-switch-root.service              systemd-sysctl.service
+initrd-udevadm-cleanup-db.service       systemd-sysext.service
+ipp-usb.service                         systemd-sysusers.service
+irqbalance.service                      systemd-time-wait-sync.service
+kerneloops.service                      systemd-timedated.service
+keyboard-setup.service                  systemd-timesyncd.service
+kmod-static-nodes.service               systemd-tmpfiles-clean.service
+kmod.service                            systemd-tmpfiles-setup-dev.service
+logrotate.service                       systemd-tmpfiles-setup.service
+man-db.service                          systemd-udev-settle.service
+modprobe@.service                       systemd-udev-trigger.service
+motd-news.service                       systemd-udevd.service
+networkd-dispatcher.service             systemd-update-utmp-runlevel.service
+nftables.service                        systemd-update-utmp.service
+nm-priv-helper.service                  systemd-user-sessions.service
+open-vm-tools.service                   systemd-volatile-root.service
+openvpn-client@.service                 thermald.service
+openvpn-server@.service                 ua-reboot-cmds.service
+openvpn.service                         ua-timer.service
+openvpn@.service                        ubuntu-advantage-desktop-daemon.service
+packagekit-offline-update.service       ubuntu-advantage.service
+packagekit.service                      udev.service
+plymouth-halt.service                   udisks2.service
+plymouth-kexec.service                  ufw.service
+plymouth-log.service                    unattended-upgrades.service
+plymouth-poweroff.service               update-notifier-download.service
+plymouth-quit-wait.service              update-notifier-motd.service
+plymouth-quit.service                   upower.service
+plymouth-read-write.service             usb_modeswitch@.service
+plymouth-reboot.service                 usbmuxd.service
+plymouth-start.service                  user-runtime-dir@.service
+plymouth-switch-root-initramfs.service  user@.service
+plymouth-switch-root.service            uuidd.service
+plymouth.service                        vgauth.service
+polkit.service                          wacom-inputattach@.service
+power-profiles-daemon.service           whoopsie.service
+procps.service                          wpa_supplicant-nl80211@.service
+pulseaudio-enable-autospawn.service     wpa_supplicant-wired@.service
+quotaon.service                         wpa_supplicant.service
+rc-local.service                        wpa_supplicant@.service
+rc.service                              x11-common.service
+rcS.service
+root@yeeun-virtual-machine:/lib/systemd/system# ls *.socket
+acpid.socket            systemd-journald-audit.socket
+apport-forward.socket   systemd-journald-dev-log.socket
+avahi-daemon.socket     systemd-journald-varlink@.socket
+cups.socket             systemd-journald.socket
+dbus.socket             systemd-journald@.socket
+saned.socket            systemd-networkd.socket
+snapd.socket            systemd-rfkill.socket
+spice-vdagentd.socket   systemd-udevd-control.socket
+syslog.socket           systemd-udevd-kernel.socket
+systemd-fsckd.socket    uuidd.socket
+systemd-initctl.socket
+root@yeeun-virtual-machine:/lib/systemd/system# 
+
+Chapter 06. 리눅스 패키지 설치와 응급 복구
+
+root@yeeun-virtual-machine:/lib/systemd/system# cd
+root@yeeun-virtual-machine:~/다운로드# wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+--2023-05-16 10:25:00--  https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+dl.google.com (dl.google.com) 해석 중... 142.251.220.46, 2404:6800:4005:805::200e
+다음으로 연결 중: dl.google.com (dl.google.com)|142.251.220.46|:443... 연결했습니다.
+HTTP 요청을 보냈습니다. 응답 기다리는 중... 200 OK
+길이: 94953468 (91M) [application/x-debian-package]
+저장 위치: ‘google-chrome-stable_current_amd64.deb’
+
+google-chrome-stable_current_a 100%[===================================================>]  90.55M  10.6MB/s    / 16s      
+
+2023-05-16 10:25:17 (5.70 MB/s) - ‘google-chrome-stable_current_amd64.deb’ 저장함 [94953468/94953468]
+
+root@yeeun-virtual-machine:~/다운로드# ls
+google-chrome-stable_current_amd64.deb
+root@yeeun-virtual-machine:~/다운로드# dpkg -i google-chrome-stable_current_amd64.deb
+Selecting previously unselected package google-chrome-stable.
+(데이터베이스 읽는중 ...현재 202163개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack google-chrome-stable_current_amd64.deb ...
+Unpacking google-chrome-stable (113.0.5672.92-1) ...
+
+google-chrome-stable (113.0.5672.92-1) 설정하는 중입니다 ...
+update-alternatives: using /usr/bin/google-chrome-stable to provide /usr/bin/x-www-browser (x-www-browser) in auto mode
+update-alternatives: using /usr/bin/google-chrome-stable to provide /usr/bin/gnome-www-browser (gnome-www-browser) in auto mode
+update-alternatives: using /usr/bin/google-chrome-stable to provide /usr/bin/google-chrome (google-chrome) in auto mode
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+Processing triggers for man-db (2.10.2-1) ...
+root@yeeun-virtual-machine:~/다운로드# 
+root@yeeun-virtual-machine:~/다운로드# apt install ./google-chrome-stable_current_amd64.deb
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+주의, './google-chrome-stable_current_amd64.deb' 대신에 'google-chrome-stable' 패키지를 선택합니다
+패키지 google-chrome-stable는 이미 최신 버전입니다 (113.0.5672.92-1).
+0개 업그레이드, 0개 새로 설치, 0개 제거 및 0개 업그레이드 안 함.
+root@yeeun-virtual-machine:~/다운로드# google-chrome
+[4185:4185:0516/104028.226890:ERROR:zygote_host_impl_linux.cc(100)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
+root@yeeun-virtual-machine:~/다운로드# nano google-chrome-stable
+root@yeeun-virtual-machine:~/다운로드# nano /usr/bin/google-chrome-stable
+root@yeeun-virtual-machine:~/다운로드# google-chrome
+[4237:4237:0516/104542.696776:ERROR:network_service_instance_impl.cc(541)] Network service crashed, restarting service.
+
+(google-chrome:4237): IBUS-WARNING **: 10:46:04.767: google-chrome has no capability of surrounding-text feature
+
+... (생략)
+
+(google-chrome:4237): IBUS-WARNING **: 10:46:20.648: google-chrome has no capability of surrounding-text feature
+^Z
+[1]+  멈춤                  google-chrome
+root@yeeun-virtual-machine:~/다운로드# bg 1 
+[1]+ google-chrome &
+root@yeeun-virtual-machine:~/다운로드# 
