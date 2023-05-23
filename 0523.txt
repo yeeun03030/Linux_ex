@@ -1,0 +1,114 @@
+root@yeeun-virtual-machine:~/바탕화면# cd ..
+root@yeeun-virtual-machine:~# dpkg -r mc
+dpkg: 경고: ignoring request to remove mc, only the config
+ files of which are on the system; use --purge to remove them too
+root@yeeun-virtual-machine:~# ls
+linkdir     snap  다운로드  바탕화면  사진  템플릿
+mydata.txt  공개  문서      비디오    음악
+root@yeeun-virtual-machine:~# cd 다운로드/
+root@yeeun-virtual-machine:~/다운로드# ls
+google-chrome-stable_current_amd64.deb  ncftp_3.2.6-1_amd64.deb
+mc_4.8.28-1_amd64.deb
+root@yeeun-virtual-machine:~/다운로드# cd ..
+root@yeeun-virtual-machine:~# apt-cache depends mc
+mc
+  의존: e2fslibs
+    libext2fs2
+  의존: libc6
+  의존: libglib2.0-0
+  의존: libgpm2
+  의존: libslang2
+  의존: libssh2-1
+  의존: mc-data
+  추천: mime-support
+  추천: perl
+  추천: unzip
+    unzip:i386
+  제안: arj
+  제안: bzip2
+    bzip2:i386
+ |제안: catdvi
+  제안: texlive-binaries
+    texlive-binaries:i386
+  제안: dbview
+  제안: djvulibre-bin
+  제안: file
+    file:i386
+  제안: genisoimage
+  제안: gv
+  제안: imagemagick
+    graphicsmagick-imagemagick-compat
+    imagemagick:i386
+    imagemagick-6.q16:i386
+    imagemagick-6.q16
+  제안: libaspell-dev
+ |제안: links
+    links:i386
+ |제안: w3m
+    w3m:i386
+  제안: lynx
+    lynx:i386
+  제안: odt2txt
+  제안: poppler-utils
+    poppler-utils:i386
+  제안: python
+  제안: python-boto
+  제안: python-tz
+ |제안: xpdf
+  제안: <pdf-viewer>
+    okular
+    atril
+    evince
+    gv
+    mupdf
+    viewpdf.app
+    xpdf
+    zathura-pdf-poppler
+  제안: zip
+    zip:i386
+root@yeeun-virtual-machine:~# apt-get install mc
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+다음의 추가 패키지가 설치될 것입니다 :
+  libssh2-1 mc-data
+제안하는 패키지:
+  arj catdvi | texlive-binaries dbview djvulibre-bin gv imagemagick
+  libaspell-dev links | w3m | lynx odt2txt python python-boto python-tz
+다음 새 패키지를 설치할 것입니다:
+  libssh2-1 mc mc-data
+0개 업그레이드, 3개 새로 설치, 0개 제거 및 0개 업그레이드 안 함.
+1,785 k바이트 아카이브를 받아야 합니다.
+이 작업 후 7,541 k바이트의 디스크 공간을 더 사용하게 됩니다.
+계속 하시겠습니까? [Y/n] y
+받기:1 http://mirror.kakao.com/ubuntu bionic/universe amd64 libssh2-1 amd64 1.8.0-1 [73.2 kB]
+받기:2 http://mirror.kakao.com/ubuntu bionic/universe amd64 mc-data all 3:4.8.19-1 [1,238 kB]
+받기:3 http://mirror.kakao.com/ubuntu bionic/universe amd64 mc amd64 3:4.8.19-1 [474 kB]
+내려받기 1,785 k바이트, 소요시간 0초 (6,747 k바이트/초)
+Selecting previously unselected package libssh2-1:amd64.
+(데이터베이스 읽는중 ...현재 202286개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack .../libssh2-1_1.8.0-1_amd64.deb ...
+Unpacking libssh2-1:amd64 (1.8.0-1) ...
+Selecting previously unselected package mc-data.
+Preparing to unpack .../mc-data_3%3a4.8.19-1_all.deb ...
+Unpacking mc-data (3:4.8.19-1) ...
+Selecting previously unselected package mc.
+Preparing to unpack .../mc_3%3a4.8.19-1_amd64.deb ...
+Unpacking mc (3:4.8.19-1) ...
+mc-data (3:4.8.19-1) 설정하는 중입니다 ...
+libssh2-1:amd64 (1.8.0-1) 설정하는 중입니다 ...
+mc (3:4.8.19-1) 설정하는 중입니다 ...
+update-alternatives: using /usr/bin/mcview to provide /usr/bin/view (view) in auto mode
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+root@yeeun-virtual-machine:~# mc
+
+root@yeeun-virtual-machine:~# nano /etc/apt/sources.list
+root@yeeun-virtual-machine:~# nano /etc/apt/sources.list
+root@yeeun-virtual-machine:~# nano /etc/apt/sources.list
+root@yeeun-virtual-machine:~# 
+
