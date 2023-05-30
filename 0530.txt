@@ -1,5 +1,3 @@
-
-
 root@yeeun-virtual-machine:~# dpkg -l telnetd
 dpkg-query: telnetd와 일치하는 패키지를 찾지 못했습니다
 root@yeeun-virtual-machine:~# apt-get -y install xinetd telnetd
