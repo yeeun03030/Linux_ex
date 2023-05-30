@@ -103,3 +103,43 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
 root@yeeun-virtual-machine:~# 
+
+windows에서 cmd로 접속하깅 ~
+1. windows 기능 켜기 -> 텔넷 클라이언트 기능 켜기
+2. windows 에서 cmd 켜기 -> telnet (ens32, inet) 23(허용한 포트번호)
+3. teluser 로 로그인하기
+
+
+Ubuntu 22.04.2 LTS
+yeeun-virtual-machine login: teluser
+Password:
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-35-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+teluser@yeeun-virtual-machine:~$ whoami
+teluser
+teluser@yeeun-virtual-machine:~$
