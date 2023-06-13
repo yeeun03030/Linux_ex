@@ -81,3 +81,358 @@ root@yeeun-virtual-machine:~# vncviewer 192.168.31.128
 vncviewer: ConnectToTcpAddr: connect: Connection refused
 Unable to connect to VNC server
 root@yeeun-virtual-machine:~# 
+
+
+root@yeeun-virtual-machine:~# dpkg -l apache2
+dpkg-query: apache2와 일치하는 패키지를 찾지 못했습니다
+root@yeeun-virtual-machine:~# dpkg -l php-common
+dpkg-query: php-common와 일치하는 패키지를 찾지 못했습니다
+root@yeeun-virtual-machine:~# dpkg -l mysql-server
+dpkg-query: mysql-server와 일치하는 패키지를 찾지 못했습니다
+root@yeeun-virtual-machine:~# apt-get update
+기존:1 http://mirror.kakao.com/ubuntu bionic InRelease 
+받기:2 https://dl.google.com/linux/chrome/deb stable InRelease [1,825 B]       
+받기:3 https://dl.google.com/linux/chrome/deb stable/main amd64 Packages [1,080 B]
+받기:4 http://kr.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+받기:5 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main i386 Packages [1,661 kB]
+받기:6 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [3,032 kB]
+받기:7 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main Translation-en [552 kB]
+받기:8 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 DEP-11 Metadata [297 kB]
+받기:9 http://kr.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [1,910 kB]
+받기:10 http://kr.archive.ubuntu.com/ubuntu bionic-updates/universe i386 Packages [1,662 kB]
+받기:11 http://kr.archive.ubuntu.com/ubuntu bionic-updates/universe Translation-en [420 kB]
+받기:12 http://kr.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 DEP-11 Metadata [304 kB]
+받기:13 http://kr.archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 DEP-11 Metadata [2,468 B]
+받기:14 http://kr.archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [1,332 kB]
+받기:15 http://kr.archive.ubuntu.com/ubuntu bionic-updates/restricted Translation-en [185 kB]
+내려받기 11.4 M바이트, 소요시간 10초 (1,156 k바이트/초)                        
+  
+
+패키지 목록을 읽는 중입니다... 완료
+W: http://ftp.daumkakao.com/ubuntu/dists/bionic/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+W: http://kr.archive.ubuntu.com/ubuntu/dists/bionic-updates/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+root@yeeun-virtual-machine:~# 
+root@yeeun-virtual-machine:~# 
+root@yeeun-virtual-machine:~# apt-get -y install lamp-server^
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+주의, 작업 'lamp-server'에 대해 'libperl5.26'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'libwind0-heimdal'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'php7.2-common'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'libgssapi3-heimdal'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'libheimbase1-heimdal'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'libfcgi-perl'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'mysql-server-5.7'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'libaio1'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'libaprutil1-dbd-sqlite3'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'mysql-client-5.7'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'libapr1'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'php7.2-opcache'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'mysql-common'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'libhx509-5-heimdal'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'libapache2-mod-php'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'liblua5.2-0'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'php-common'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'php7.2-cli'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'libhcrypto4-heimdal'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'libapache2-mod-php7.2'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'php7.2-json'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'libroken18-heimdal'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'libasn1-8-heimdal'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'libheimntlm0-heimdal'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'libldap-2.4-2'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'php7.2-readline'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'apache2-data'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'libhtml-template-perl'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'apache2-bin'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'libaprutil1'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'php-mysql'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'libcgi-fast-perl'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'mysql-server'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'mysql-server-core-5.7'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'apache2-utils'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'libevent-core-2.1-6'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'apache2'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'libkrb5-26-heimdal'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'mysql-client-core-5.7'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'perl-modules-5.26'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'libcgi-pm-perl'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'libaprutil1-ldap'을(를) 선택합니다
+주의, 작업 'lamp-server'에 대해 'php7.2-mysql'을(를) 선택합니다
+몇몇 패키지를 설치할 수 없습니다. 요청한 상황이 불가능할 수도 있고,
+불안정 배포판을 사용해서 일부 필요한 패키지를 아직 만들지 않았거나,
+아직 Incoming에서 나오지 않은 경우일 수도 있습니다.
+이 상황을 해결하는데 다음 정보가 도움이 될 수도 있습니다:
+
+다음 패키지의 의존성이 맞지 않습니다:
+ libfcgi-perl : 의존: perlapi-5.26.0
+ perl : 망가뜨림: perl-modules-5.26 (< 5.26.2-5) 하지만 5.26.1-6ubuntu0.7 패키지를 설치할 것입니다
+        망가뜨림: perl-modules-5.26:i386 (< 5.26.2-5)
+E: 문제를 바로잡을 수 없습니다. 망가진 고정 패키지가 있습니다.
+root@yeeun-virtual-machine:~# 
+
+root@yeeun-virtual-machine:~# apt-get -y install apache2
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+다음의 추가 패키지가 설치될 것입니다 :
+  apache2-bin apache2-data apache2-utils libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap libasn1-8-heimdal libgdbm5
+  libgssapi3-heimdal libhcrypto4-heimdal libheimbase1-heimdal
+  libheimntlm0-heimdal libhx509-5-heimdal libkrb5-26-heimdal libldap-2.4-2
+  liblua5.2-0 libroken18-heimdal libssl1.1 libwind0-heimdal
+제안하는 패키지:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom gdbm-l10n
+다음 새 패키지를 설치할 것입니다:
+  apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap libasn1-8-heimdal libgdbm5
+  libgssapi3-heimdal libhcrypto4-heimdal libheimbase1-heimdal
+  libheimntlm0-heimdal libhx509-5-heimdal libkrb5-26-heimdal libldap-2.4-2
+  liblua5.2-0 libroken18-heimdal libssl1.1 libwind0-heimdal
+0개 업그레이드, 21개 새로 설치, 0개 제거 및 10개 업그레이드 안 함.
+4,002 k바이트 아카이브를 받아야 합니다.
+이 작업 후 14.5 M바이트의 디스크 공간을 더 사용하게 됩니다.
+받기:1 http://mirror.kakao.com/ubuntu bionic/main amd64 libapr1 amd64 1.6.3-2 [90.9 kB]
+받기:2 http://mirror.kakao.com/ubuntu bionic/main amd64 libgdbm5 amd64 1.14.1-6 [26.0 kB]
+받기:3 http://mirror.kakao.com/ubuntu bionic/main amd64 liblua5.2-0 amd64 5.2.4-1.1build1 [108 kB]
+받기:4 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libssl1.1 amd64 1.1.1-1ubuntu2.1~18.04.23 [1,303 kB]
+받기:5 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libaprutil1 amd64 1.6.1-2ubuntu0.1 [84.6 kB]
+받기:6 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.1-2ubuntu0.1 [10.6 kB]
+받기:7 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libroken18-heimdal amd64 7.5.0+dfsg-1ubuntu0.4 [42.3 kB]
+받기:8 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libasn1-8-heimdal amd64 7.5.0+dfsg-1ubuntu0.4 [175 kB]
+받기:9 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libheimbase1-heimdal amd64 7.5.0+dfsg-1ubuntu0.4 [30.3 kB]
+받기:10 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libhcrypto4-heimdal amd64 7.5.0+dfsg-1ubuntu0.4 [85.9 kB]
+받기:11 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libwind0-heimdal amd64 7.5.0+dfsg-1ubuntu0.4 [48.0 kB]
+받기:12 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libhx509-5-heimdal amd64 7.5.0+dfsg-1ubuntu0.4 [107 kB]
+받기:13 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libkrb5-26-heimdal amd64 7.5.0+dfsg-1ubuntu0.4 [207 kB]
+받기:14 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libheimntlm0-heimdal amd64 7.5.0+dfsg-1ubuntu0.4 [14.8 kB]
+받기:15 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libgssapi3-heimdal amd64 7.5.0+dfsg-1ubuntu0.4 [96.7 kB]
+받기:16 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libldap-2.4-2 amd64 2.4.45+dfsg-1ubuntu1.11 [154 kB]
+받기:17 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libaprutil1-ldap amd64 1.6.1-2ubuntu0.1 [8,752 B]
+받기:18 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-bin amd64 2.4.29-1ubuntu4.27 [1,071 kB]
+받기:19 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-utils amd64 2.4.29-1ubuntu4.27 [83.3 kB]
+받기:20 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-data all 2.4.29-1ubuntu4.27 [160 kB]
+받기:21 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2 amd64 2.4.29-1ubuntu4.27 [95.1 kB]
+내려받기 4,002 k바이트, 소요시간 8초 (523 k바이트/초)                          
+패키지를 미리 설정하는 중입니다...
+Selecting previously unselected package libapr1:amd64.
+(데이터베이스 읽는중 ...현재 202796개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack .../00-libapr1_1.6.3-2_amd64.deb ...
+Unpacking libapr1:amd64 (1.6.3-2) ...
+Selecting previously unselected package libgdbm5:amd64.
+Preparing to unpack .../01-libgdbm5_1.14.1-6_amd64.deb ...
+Unpacking libgdbm5:amd64 (1.14.1-6) ...
+Selecting previously unselected package libssl1.1:amd64.
+Preparing to unpack .../02-libssl1.1_1.1.1-1ubuntu2.1~18.04.23_amd64.deb ...
+Unpacking libssl1.1:amd64 (1.1.1-1ubuntu2.1~18.04.23) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../03-libaprutil1_1.6.1-2ubuntu0.1_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.6.1-2ubuntu0.1) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../04-libaprutil1-dbd-sqlite3_1.6.1-2ubuntu0.1_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.1-2ubuntu0.1) ...
+Selecting previously unselected package libroken18-heimdal:amd64.
+Preparing to unpack .../05-libroken18-heimdal_7.5.0+dfsg-1ubuntu0.4_amd64.deb ...
+Unpacking libroken18-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) ...
+Selecting previously unselected package libasn1-8-heimdal:amd64.
+Preparing to unpack .../06-libasn1-8-heimdal_7.5.0+dfsg-1ubuntu0.4_amd64.deb ...
+Unpacking libasn1-8-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) ...
+Selecting previously unselected package libheimbase1-heimdal:amd64.
+Preparing to unpack .../07-libheimbase1-heimdal_7.5.0+dfsg-1ubuntu0.4_amd64.deb ...
+Unpacking libheimbase1-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) ...
+Selecting previously unselected package libhcrypto4-heimdal:amd64.
+Preparing to unpack .../08-libhcrypto4-heimdal_7.5.0+dfsg-1ubuntu0.4_amd64.deb ...
+Unpacking libhcrypto4-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) ...
+Selecting previously unselected package libwind0-heimdal:amd64.
+Preparing to unpack .../09-libwind0-heimdal_7.5.0+dfsg-1ubuntu0.4_amd64.deb ...
+Unpacking libwind0-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) ...
+Selecting previously unselected package libhx509-5-heimdal:amd64.
+Preparing to unpack .../10-libhx509-5-heimdal_7.5.0+dfsg-1ubuntu0.4_amd64.deb ...
+Unpacking libhx509-5-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) ...
+Selecting previously unselected package libkrb5-26-heimdal:amd64.
+Preparing to unpack .../11-libkrb5-26-heimdal_7.5.0+dfsg-1ubuntu0.4_amd64.deb ...
+Unpacking libkrb5-26-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) ...
+Selecting previously unselected package libheimntlm0-heimdal:amd64.
+Preparing to unpack .../12-libheimntlm0-heimdal_7.5.0+dfsg-1ubuntu0.4_amd64.deb ...
+Unpacking libheimntlm0-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) ...
+Selecting previously unselected package libgssapi3-heimdal:amd64.
+Preparing to unpack .../13-libgssapi3-heimdal_7.5.0+dfsg-1ubuntu0.4_amd64.deb ...
+Unpacking libgssapi3-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) ...
+Selecting previously unselected package libldap-2.4-2:amd64.
+Preparing to unpack .../14-libldap-2.4-2_2.4.45+dfsg-1ubuntu1.11_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.45+dfsg-1ubuntu1.11) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../15-libaprutil1-ldap_1.6.1-2ubuntu0.1_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.6.1-2ubuntu0.1) ...
+Selecting previously unselected package liblua5.2-0:amd64.
+Preparing to unpack .../16-liblua5.2-0_5.2.4-1.1build1_amd64.deb ...
+Unpacking liblua5.2-0:amd64 (5.2.4-1.1build1) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../17-apache2-bin_2.4.29-1ubuntu4.27_amd64.deb ...
+Unpacking apache2-bin (2.4.29-1ubuntu4.27) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../18-apache2-utils_2.4.29-1ubuntu4.27_amd64.deb ...
+Unpacking apache2-utils (2.4.29-1ubuntu4.27) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../19-apache2-data_2.4.29-1ubuntu4.27_all.deb ...
+Unpacking apache2-data (2.4.29-1ubuntu4.27) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../20-apache2_2.4.29-1ubuntu4.27_amd64.deb ...
+Unpacking apache2 (2.4.29-1ubuntu4.27) ...
+libgdbm5:amd64 (1.14.1-6) 설정하는 중입니다 ...
+libssl1.1:amd64 (1.1.1-1ubuntu2.1~18.04.23) 설정하는 중입니다 ...
+libapr1:amd64 (1.6.3-2) 설정하는 중입니다 ...
+libroken18-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) 설정하는 중입니다 ...
+liblua5.2-0:amd64 (5.2.4-1.1build1) 설정하는 중입니다 ...
+apache2-data (2.4.29-1ubuntu4.27) 설정하는 중입니다 ...
+libheimbase1-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) 설정하는 중입니다 ...
+libaprutil1:amd64 (1.6.1-2ubuntu0.1) 설정하는 중입니다 ...
+libasn1-8-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) 설정하는 중입니다 ...
+libaprutil1-dbd-sqlite3:amd64 (1.6.1-2ubuntu0.1) 설정하는 중입니다 ...
+libhcrypto4-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) 설정하는 중입니다 ...
+libwind0-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) 설정하는 중입니다 ...
+apache2-utils (2.4.29-1ubuntu4.27) 설정하는 중입니다 ...
+libhx509-5-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) 설정하는 중입니다 ...
+libkrb5-26-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) 설정하는 중입니다 ...
+libheimntlm0-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) 설정하는 중입니다 ...
+libgssapi3-heimdal:amd64 (7.5.0+dfsg-1ubuntu0.4) 설정하는 중입니다 ...
+libldap-2.4-2:amd64 (2.4.45+dfsg-1ubuntu1.11) 설정하는 중입니다 ...
+libaprutil1-ldap:amd64 (1.6.1-2ubuntu0.1) 설정하는 중입니다 ...
+apache2-bin (2.4.29-1ubuntu4.27) 설정하는 중입니다 ...
+apache2 (2.4.29-1ubuntu4.27) 설정하는 중입니다 ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /lib/systemd/system/apache2.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /lib/systemd/system/apache-htcacheclean.service.
+Processing triggers for ufw (0.36.1-4build1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+root@yeeun-virtual-machine:~# systemctl restart apache2
+root@yeeun-virtual-machine:~# systemctl apache2
+Unknown command verb apache2.
+root@yeeun-virtual-machine:~# systemctl enable apache2
+Synchronizing state of apache2.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable apache2
+root@yeeun-virtual-machine:~# systemctl status apache2
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor prese>
+    Drop-In: /usr/lib/systemd/system/apache2.service.d
+             └─apache2-systemd.conf
+     Active: active (running) since Tue 2023-06-13 10:30:27 KST; 44s ago
+   Main PID: 4423 (apache2)
+      Tasks: 55 (limit: 4575)
+     Memory: 5.3M
+        CPU: 46ms
+     CGroup: /system.slice/apache2.service
+             ├─4423 /usr/sbin/apache2 -k start
+             ├─4424 /usr/sbin/apache2 -k start
+             └─4425 /usr/sbin/apache2 -k start
+
+ 6월 13 10:30:27 yeeun-virtual-machine systemd[1]: Starting The Apache HTTP Ser>
+ 6월 13 10:30:27 yeeun-virtual-machine apachectl[4422]: AH00558: apache2: Could>
+ 6월 13 10:30:27 yeeun-virtual-machine systemd[1]: Started The Apache HTTP Serv>
+root@yeeun-virtual-machine:~# 
+
+root@yeeun-virtual-machine:~# cd var/www/html
+bash: cd: var/www/html: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:~# cd /var/www/html
+root@yeeun-virtual-machine:/var/www/html# nano index.html
+root@yeeun-virtual-machine:/var/www/html# ifconfig
+ens32: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.217.128  netmask 255.255.255.0  broadcast 192.168.217.255
+        inet6 fe80::8cb:6fe5:415:44aa  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:8a:aa:45  txqueuelen 1000  (Ethernet)
+        RX packets 72278  bytes 107219310 (107.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 9189  bytes 634040 (634.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 263  bytes 25242 (25.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 263  bytes 25242 (25.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+root@yeeun-virtual-machine:/var/www/html# ^C
+root@yeeun-virtual-machine:/var/www/html# ufw allow 80
+규칙이 추가되었습니다
+규칙이 추가되었습니다 (v6)
+root@yeeun-virtual-machine:/var/www/html# cd
+root@yeeun-virtual-machine:~# ls
+linkdir     snap  다운로드  바탕화면  사진  템플릿
+mydata.txt  공개  문서      비디오    음악
+root@yeeun-virtual-machine:~# cd 다운로드
+root@yeeun-virtual-machine:~/다운로드# ls
+20230612-master                         mc_4.8.28-1_amd64.deb
+20230612-master.zip                     ncftp_3.2.6-1_amd64.deb
+google-chrome-stable_current_amd64.deb
+root@yeeun-virtual-machine:~/다운로드# cd 20230612-master
+root@yeeun-virtual-machine:~/다운로드/20230612-master# ls
+01.html  04.html  07.html  10.html  13.html  16.html  19.html  22.html
+02.html  05.html  08.html  11.html  14.html  17.html  20.html  23.html
+03.html  06.html  09.html  12.html  15.html  18.html  21.html
+root@yeeun-virtual-machine:~/다운로드/20230612-master# mvdir 01.html /var/www/html/
+명령어 'mvdir' 을(를) 찾을 수 없습니다. 다음 명령어로 시도하시겠습니까:
+  deb mdirmtools의 명령어 ' (4.0.33-1+really4.0.32-1build1)'
+  deb mkdircoreutils의 명령어 ' (8.32-4.1ubuntu1)'
+  deb vdircoreutils의 명령어 ' (8.32-4.1ubuntu1)'
+  deb svdirsvtools의 명령어 ' (0.6-5)'
+  deb mmdirsimh의 명령어 ' (3.8.1-6.1)'
+  deb mvdiccanna-utils의 명령어 ' (3.7p3-17)'
+Try: apt install <deb name>
+root@yeeun-virtual-machine:~/다운로드/20230612-master# mv 01.html /var/www/html/root@yeeun-virtual-machine:~/다운로드/20230612-master# ls
+02.html  05.html  08.html  11.html  14.html  17.html  20.html  23.html
+03.html  06.html  09.html  12.html  15.html  18.html  21.html
+04.html  07.html  10.html  13.html  16.html  19.html  22.html
+root@yeeun-virtual-machine:~/다운로드/20230612-master# cd /var/www/html/
+root@yeeun-virtual-machine:/var/www/html# ls
+01.html  index.html
+root@yeeun-virtual-machine:/var/www/html# cd
+root@yeeun-virtual-machine:~# ls
+linkdir     snap  다운로드  바탕화면  사진  템플릿
+mydata.txt  공개  문서      비디오    음악
+root@yeeun-virtual-machine:~# cd 다운로드/
+root@yeeun-virtual-machine:~/다운로드# ls
+20230612-master                         mc_4.8.28-1_amd64.deb
+20230612-master.zip                     ncftp_3.2.6-1_amd64.deb
+google-chrome-stable_current_amd64.deb
+root@yeeun-virtual-machine:~/다운로드# cd 20230612-master
+root@yeeun-virtual-machine:~/다운로드/20230612-master# ls
+02.html  05.html  08.html  11.html  14.html  17.html  20.html  23.html
+03.html  06.html  09.html  12.html  15.html  18.html  21.html
+04.html  07.html  10.html  13.html  16.html  19.html  22.html
+root@yeeun-virtual-machine:~/다운로드/20230612-master# mv *.html /var/www/html/
+root@yeeun-virtual-machine:~/다운로드/20230612-master# ls
+root@yeeun-virtual-machine:~/다운로드/20230612-master# cd /var/www/html/
+root@yeeun-virtual-machine:/var/www/html# ls
+01.html  04.html  07.html  10.html  13.html  16.html  19.html  22.html
+02.html  05.html  08.html  11.html  14.html  17.html  20.html  23.html
+03.html  06.html  09.html  12.html  15.html  18.html  21.html  index.html
+root@yeeun-virtual-machine:/var/www/html# 
