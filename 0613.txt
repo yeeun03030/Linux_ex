@@ -436,3 +436,230 @@ root@yeeun-virtual-machine:/var/www/html# ls
 02.html  05.html  08.html  11.html  14.html  17.html  20.html  23.html
 03.html  06.html  09.html  12.html  15.html  18.html  21.html  index.html
 root@yeeun-virtual-machine:/var/www/html# 
+
+root@yeeun-virtual-machine:/var/www/html# nm-connection-aditor
+명령어 'nm-connection-aditor' 을(를) 찾을 수 없습니다. 다음 명령어로 시도하시겠습니까:
+  deb nm-connection-editornetwork-manager-gnome의 명령어 ' (1.24.0-1ubuntu3)'
+Try: apt install <deb name>
+root@yeeun-virtual-machine:/var/www/html# nm-connection-aditer
+nm-connection-aditer: 명령을 찾을 수 없습니다
+root@yeeun-virtual-machine:/var/www/html# nm-connection-editor
+root@yeeun-virtual-machine:/var/www/html# ifconfig
+ens32: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.217.128  netmask 255.255.255.0  broadcast 192.168.217.255
+        inet6 fe80::8cb:6fe5:415:44aa  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:8a:aa:45  txqueuelen 1000  (Ethernet)
+        RX packets 84844  bytes 123194751 (123.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 13626  bytes 1100668 (1.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 735  bytes 96733 (96.7 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 735  bytes 96733 (96.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+root@yeeun-virtual-machine:/var/www/html# nm-connection-editor
+** Message: 11:06:37.071: Cannot save connection due to error: 올바르지 않은 설정 IPv4 설정: IPv4 주소 “”(은)는 유효하지 않음
+** Message: 11:06:45.082: Connection validates and can be saved
+** Message: 11:06:49.426: Cannot save connection due to error: 올바르지 않은 설정 IPv4 설정: IPv4 주소 넷마스크 “255”(은)는 유효하지 않음
+** Message: 11:06:56.425: Connection validates and can be saved
+** Message: 11:07:33.906: Cannot save connection due to error: 올바르지 않은 설정 IPv4 설정: IPv4 DNS 서버 “5”(은)는 유효하지 않음
+** Message: 11:07:34.162: Cannot save connection due to error: 올바르지 않은 설정 IPv4 설정: IPv4 DNS 서버 “5.”(은)는 유효하지 않음
+** Message: 11:07:35.201: Cannot save connection due to error: 올바르지 않은 설정 IPv4 설정: IPv4 DNS 서버 “5”(은)는 유효하지 않음
+** Message: 11:07:35.378: Connection validates and can be saved
+** Message: 11:07:35.650: Cannot save connection due to error: 올바르지 않은 설정 IPv4 설정: IPv4 DNS 서버 “8”(은)는 유효하지 않음
+** Message: 11:07:36.000: Cannot save connection due to error: 올바르지 않은 설정 IPv4 설정: IPv4 DNS 서버 “8.”(은)는 유효하지 않음
+** Message: 11:07:36.180: Cannot save connection due to error: 올바르지 않은 설정 IPv4 설정: IPv4 DNS 서버 “8.8”(은)는 유효하지 않음
+** Message: 11:07:36.507: Cannot save connection due to error: 올바르지 않은 설정 IPv4 설정: IPv4 DNS 서버 “8.8.”(은)는 유효하지 않음
+** Message: 11:07:36.747: Cannot save connection due to error: 올바르지 않은 설정 IPv4 설정: IPv4 DNS 서버 “8.8.8”(은)는 유효하지 않음
+** Message: 11:07:37.091: Cannot save connection due to error: 올바르지 않은 설정 IPv4 설정: IPv4 DNS 서버 “8.8.8.”(은)는 유효하지 않음
+** Message: 11:07:37.405: Connection validates and can be saved
+** Message: 11:08:00.114: Cannot save connection due to error: 올바르지 않은 설정 IPv4 설정: IPv4 DNS 서버 “8”(은)는 유효하지 않음
+** Message: 11:08:00.227: Cannot save connection due to error: 올바르지 않은 설정 IPv4 설정: IPv4 DNS 서버 “8.”(은)는 유효하지 않음
+** Message: 11:08:00.347: Cannot save connection due to error: 올바르지 않은 설정 IPv4 설정: IPv4 DNS 서버 “8.8”(은)는 유효하지 않음
+** Message: 11:08:00.489: Cannot save connection due to error: 올바르지 않은 설정 IPv4 설정: IPv4 DNS 서버 “8.8.”(은)는 유효하지 않음
+** Message: 11:08:00.572: Cannot save connection due to error: 올바르지 않은 설정 IPv4 설정: IPv4 DNS 서버 “8.8.8”(은)는 유효하지 않음
+** Message: 11:08:00.690: Cannot save connection due to error: 올바르지 않은 설정 IPv4 설정: IPv4 DNS 서버 “8.8.8.”(은)는 유효하지 않음
+** Message: 11:08:00.810: Connection validates and can be saved
+
+
+root@yeeun-virtual-machine:/var/www/html# 
+root@yeeun-virtual-machine:/var/www/html# 
+root@yeeun-virtual-machine:/var/www/html# systemctl restart mysql
+Failed to restart mysql.service: Unit mysql.service not found.
+root@yeeun-virtual-machine:/var/www/html# apt-get update
+기존:1 http://mirror.kakao.com/ubuntu bionic InRelease 
+기존:2 https://dl.google.com/linux/chrome/deb stable InRelease                 
+받기:3 http://kr.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]  
+내려받기 88.7 k바이트, 소요시간 2초 (50.3 k바이트/초)                  
+패키지 목록을 읽는 중입니다... 완료
+W: http://ftp.daumkakao.com/ubuntu/dists/bionic/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+W: http://kr.archive.ubuntu.com/ubuntu/dists/bionic-updates/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+root@yeeun-virtual-machine:/var/www/html# apt-get -y install myspl-server
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+E: myspl-server 패키지를 찾을 수 없습니다
+root@yeeun-virtual-machine:/var/www/html# apt-get -y install mysql-server
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+다음의 추가 패키지가 설치될 것입니다 :
+  libaio1 libcgi-pm-perl libevent-core-2.1-6 libhtml-template-perl
+  mysql-client-5.7 mysql-client-core-5.7 mysql-common mysql-server-5.7
+  mysql-server-core-5.7
+제안하는 패키지:
+  libipc-sharedcache-perl mailx tinyca
+추천하는 패키지:
+  libcgi-fast-perl
+다음 새 패키지를 설치할 것입니다:
+  libaio1 libcgi-pm-perl libevent-core-2.1-6 libhtml-template-perl
+  mysql-client-5.7 mysql-client-core-5.7 mysql-common mysql-server
+  mysql-server-5.7 mysql-server-core-5.7
+0개 업그레이드, 10개 새로 설치, 0개 제거 및 10개 업그레이드 안 함.
+19.7 M바이트 아카이브를 받아야 합니다.
+이 작업 후 156 M바이트의 디스크 공간을 더 사용하게 됩니다.
+받기:1 http://mirror.kakao.com/ubuntu bionic/main amd64 mysql-common all 5.8+1.0.4 [7,308 B]
+받기:2 http://mirror.kakao.com/ubuntu bionic/main amd64 libevent-core-2.1-6 amd64 2.1.8-stable-4build1 [85.9 kB]
+받기:3 http://mirror.kakao.com/ubuntu bionic/main amd64 libcgi-pm-perl all 4.38-1 [185 kB]
+받기:4 http://mirror.kakao.com/ubuntu bionic/main amd64 libhtml-template-perl all 2.97-1 [59.0 kB]
+받기:5 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libaio1 amd64 0.3.110-5ubuntu0.1 [6,476 B]
+받기:6 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 mysql-client-core-5.7 amd64 5.7.42-0ubuntu0.18.04.1 [6,752 kB]
+받기:7 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 mysql-client-5.7 amd64 5.7.42-0ubuntu0.18.04.1 [2,028 kB]
+받기:8 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 mysql-server-core-5.7 amd64 5.7.42-0ubuntu0.18.04.1 [7,542 kB]
+받기:9 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 mysql-server-5.7 amd64 5.7.42-0ubuntu0.18.04.1 [3,011 kB]
+받기:10 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 mysql-server all 5.7.42-0ubuntu0.18.04.1 [9,944 B]
+내려받기 19.7 M바이트, 소요시간 4초 (4,603 k바이트/초)
+패키지를 미리 설정하는 중입니다...
+Selecting previously unselected package mysql-common.
+(데이터베이스 읽는중 ...현재 203581개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack .../0-mysql-common_5.8+1.0.4_all.deb ...
+Unpacking mysql-common (5.8+1.0.4) ...
+Selecting previously unselected package libaio1:amd64.
+Preparing to unpack .../1-libaio1_0.3.110-5ubuntu0.1_amd64.deb ...
+Unpacking libaio1:amd64 (0.3.110-5ubuntu0.1) ...
+Selecting previously unselected package mysql-client-core-5.7.
+Preparing to unpack .../2-mysql-client-core-5.7_5.7.42-0ubuntu0.18.04.1_amd64.deb ...
+Unpacking mysql-client-core-5.7 (5.7.42-0ubuntu0.18.04.1) ...
+Selecting previously unselected package mysql-client-5.7.
+Preparing to unpack .../3-mysql-client-5.7_5.7.42-0ubuntu0.18.04.1_amd64.deb ...
+Unpacking mysql-client-5.7 (5.7.42-0ubuntu0.18.04.1) ...
+Selecting previously unselected package mysql-server-core-5.7.
+Preparing to unpack .../4-mysql-server-core-5.7_5.7.42-0ubuntu0.18.04.1_amd64.deb ...
+Unpacking mysql-server-core-5.7 (5.7.42-0ubuntu0.18.04.1) ...
+Selecting previously unselected package libevent-core-2.1-6:amd64.
+Preparing to unpack .../5-libevent-core-2.1-6_2.1.8-stable-4build1_amd64.deb ...
+Unpacking libevent-core-2.1-6:amd64 (2.1.8-stable-4build1) ...
+mysql-common (5.8+1.0.4) 설정하는 중입니다 ...
+update-alternatives: using /etc/mysql/my.cnf.fallback to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Selecting previously unselected package mysql-server-5.7.
+(데이터베이스 읽는중 ...현재 203749개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack .../mysql-server-5.7_5.7.42-0ubuntu0.18.04.1_amd64.deb ...
+Unpacking mysql-server-5.7 (5.7.42-0ubuntu0.18.04.1) ...
+Selecting previously unselected package libcgi-pm-perl.
+Preparing to unpack .../libcgi-pm-perl_4.38-1_all.deb ...
+Unpacking libcgi-pm-perl (4.38-1) ...
+Selecting previously unselected package libhtml-template-perl.
+Preparing to unpack .../libhtml-template-perl_2.97-1_all.deb ...
+Unpacking libhtml-template-perl (2.97-1) ...
+Selecting previously unselected package mysql-server.
+Preparing to unpack .../mysql-server_5.7.42-0ubuntu0.18.04.1_all.deb ...
+Unpacking mysql-server (5.7.42-0ubuntu0.18.04.1) ...
+libcgi-pm-perl (4.38-1) 설정하는 중입니다 ...
+libhtml-template-perl (2.97-1) 설정하는 중입니다 ...
+libevent-core-2.1-6:amd64 (2.1.8-stable-4build1) 설정하는 중입니다 ...
+libaio1:amd64 (0.3.110-5ubuntu0.1) 설정하는 중입니다 ...
+mysql-server-core-5.7 (5.7.42-0ubuntu0.18.04.1) 설정하는 중입니다 ...
+mysql-client-core-5.7 (5.7.42-0ubuntu0.18.04.1) 설정하는 중입니다 ...
+mysql-client-5.7 (5.7.42-0ubuntu0.18.04.1) 설정하는 중입니다 ...
+mysql-server-5.7 (5.7.42-0ubuntu0.18.04.1) 설정하는 중입니다 ...
+update-alternatives: using /etc/mysql/mysql.cnf to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Renaming removed key_buffer and myisam-recover options (if present)
+Created symlink /etc/systemd/system/multi-user.target.wants/mysql.service → /lib/systemd/system/mysql.service.
+mysql-server (5.7.42-0ubuntu0.18.04.1) 설정하는 중입니다 ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+root@yeeun-virtual-machine:/var/www/html# systemctl restart mysql
+root@yeeun-virtual-machine:/var/www/html# systemctl enable mysql
+Synchronizing state of mysql.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable mysql
+root@yeeun-virtual-machine:/var/www/html# systemctl status mysql
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset:>
+     Active: active (running) since Tue 2023-06-13 11:41:41 KST; 30s ago
+   Main PID: 6585 (mysqld)
+      Tasks: 27 (limit: 4575)
+     Memory: 174.5M
+        CPU: 384ms
+     CGroup: /system.slice/mysql.service
+             └─6585 /usr/sbin/mysqld --daemonize --pid-file=/run/mysqld/mysqld.>
+
+ 6월 13 11:41:41 yeeun-virtual-machine systemd[1]: Starting MySQL Community Ser>
+ 6월 13 11:41:41 yeeun-virtual-machine systemd[1]: Started MySQL Community Serv>
+root@yeeun-virtual-machine:/var/www/html# apt-get -y install php7.2 common
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+E: common 패키지를 찾을 수 없습니다
+root@yeeun-virtual-machine:/var/www/html# apt-get -y install php7.2-common
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+다음의 추가 패키지가 설치될 것입니다 :
+  php-common
+다음 새 패키지를 설치할 것입니다:
+  php-common php7.2-common
+0개 업그레이드, 2개 새로 설치, 0개 제거 및 10개 업그레이드 안 함.
+903 k바이트 아카이브를 받아야 합니다.
+이 작업 후 6,712 k바이트의 디스크 공간을 더 사용하게 됩니다.
+받기:1 http://mirror.kakao.com/ubuntu bionic/main amd64 php-common all 1:60ubuntu1 [12.1 kB]
+받기:2 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 php7.2-common amd64 7.2.24-0ubuntu0.18.04.17 [891 kB]
+내려받기 903 k바이트, 소요시간 2초 (373 k바이트/초)
+Selecting previously unselected package php-common.
+(데이터베이스 읽는중 ...현재 203884개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack .../php-common_1%3a60ubuntu1_all.deb ...
+Unpacking php-common (1:60ubuntu1) ...
+Selecting previously unselected package php7.2-common.
+Preparing to unpack .../php7.2-common_7.2.24-0ubuntu0.18.04.17_amd64.deb ...
+Unpacking php7.2-common (7.2.24-0ubuntu0.18.04.17) ...
+php-common (1:60ubuntu1) 설정하는 중입니다 ...
+Created symlink /etc/systemd/system/timers.target.wants/phpsessionclean.timer → /lib/systemd/system/phpsessionclean.timer.
+php7.2-common (7.2.24-0ubuntu0.18.04.17) 설정하는 중입니다 ...
+
+Creating config file /etc/php/7.2/mods-available/calendar.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/ctype.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/exif.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/fileinfo.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/ftp.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/gettext.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/iconv.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/pdo.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/phar.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/posix.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/shmop.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/sockets.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/sysvmsg.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/sysvsem.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/sysvshm.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/tokenizer.ini with new version
+root@yeeun-virtual-machine:/var/www/html# 
