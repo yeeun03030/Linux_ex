@@ -1,0 +1,152 @@
+root@yeeun-virtual-machine:~# nano /etc/vsftpd.conf
+root@yeeun-virtual-machine:~# cd /etc/
+root@yeeun-virtual-machine:/etc# ls
+ModemManager                   gtk-2.0              pm
+NetworkManager                 gtk-3.0              pnm2ppa.conf
+PackageKit                     hdparm.conf          polkit-1
+UPower                         host.conf            ppp
+X11                            hostid               profile
+acpi                           hostname             profile.d
+adduser.conf                   hosts                protocols
+alsa                           hosts.allow          pulse
+alternatives                   hosts.deny           python3
+anacrontab                     hp                   python3.10
+apache2                        ifplugd              rc0.d
+apg.conf                       init                 rc1.d
+apm                            init.d               rc2.d
+apparmor                       initramfs-tools      rc3.d
+apparmor.d                     inputrc              rc4.d
+apport                         insserv.conf.d       rc5.d
+appstream.conf                 ipp-usb              rc6.d
+apt                            iproute2             rcS.d
+avahi                          issue                resolv.conf
+bash.bashrc                    issue.net            rmt
+bash_completion                kernel               rpc
+bash_completion.d              kernel-img.conf      rsyslog.conf
+bindresvport.blacklist         kerneloops.conf      rsyslog.d
+binfmt.d                       ld.so.cache          rygel.conf
+bluetooth                      ld.so.conf           sane.d
+brlapi.key                     ld.so.conf.d         security
+brltty                         ldap                 selinux
+brltty.conf                    legal                sensors.d
+ca-certificates                libao.conf           sensors3.conf
+ca-certificates.conf           libaudit.conf        services
+ca-certificates.conf.dpkg-old  libblockdev          sgml
+chatscripts                    libnl-3              shadow
+console-setup                  libpaper.d           shadow-
+cracklib                       libreoffice          shells
+cron.d                         locale.alias         skel
+cron.daily                     locale.gen           snmp
+cron.hourly                    localtime            speech-dispatcher
+cron.monthly                   logcheck             ssh
+cron.weekly                    login.defs           ssl
+crontab                        logrotate.conf       subgid
+cups                           logrotate.d          subgid-
+cupshelpers                    lsb-release          subuid
+dbus-1                         machine-id           subuid-
+dconf                          magic                sudo.conf
+debconf.conf                   magic.mime           sudo_logsrvd.conf
+debian_version                 mailcap              sudoers
+default                        mailcap.order        sudoers.d
+deluser.conf                   manpath.config       sysctl.conf
+depmod.d                       mc                   sysctl.d
+dhcp                           mime.types           systemd
+dictionaries-common            mke2fs.conf          terminfo
+dpkg                           modprobe.d           thermald
+e2scrub.conf                   modules              thunderbird
+emacs                          modules-load.d       timezone
+environment                    mtab                 tmpfiles.d
+environment.d                  mysql                ubuntu-advantage
+ethertypes                     nanorc               ucf.conf
+firefox                        netconfig            udev
+fonts                          netplan              udisks2
+fprintd.conf                   network              ufw
+fstab                          networkd-dispatcher  update-manager
+fuse.conf                      networks             update-motd.d
+fwupd                          newt                 update-notifier
+gai.conf                       nftables.conf        usb_modeswitch.conf
+gdb                            nsswitch.conf        usb_modeswitch.d
+gdm3                           openvpn              vim
+geoclue                        opt                  vmware-tools
+ghostscript                    os-release           vtrgb
+glvnd                          pam.conf             vulkan
+gnome                          pam.d                wgetrc
+groff                          papersize            wpa_supplicant
+group                          passwd               xattr.conf
+group-                         passwd-              xdg
+grub.d                         pcmcia               xinetd.conf
+gshadow                        perl                 xinetd.d
+gshadow-                       php                  xml
+gss                            pki                  zsh_command_not_found
+root@yeeun-virtual-machine:/etc# nano vsftpd.conf
+root@yeeun-virtual-machine:/etc# apt-get -y install vsftpd
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+다음 새 패키지를 설치할 것입니다:
+  vsftpd
+0개 업그레이드, 1개 새로 설치, 0개 제거 및 10개 업그레이드 안 함.
+115 k바이트 아카이브를 받아야 합니다.
+이 작업 후 334 k바이트의 디스크 공간을 더 사용하게 됩니다.
+받기:1 http://mirror.kakao.com/ubuntu bionic/main amd64 vsftpd amd64 3.0.3-9build1 [115 kB]
+내려받기 115 k바이트, 소요시간 1초 (230 k바이트/초)
+패키지를 미리 설정하는 중입니다...
+Selecting previously unselected package vsftpd.
+(데이터베이스 읽는중 ...현재 203961개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack .../vsftpd_3.0.3-9build1_amd64.deb ...
+Unpacking vsftpd (3.0.3-9build1) ...
+vsftpd (3.0.3-9build1) 설정하는 중입니다 ...
+Created symlink /etc/systemd/system/multi-user.target.wants/vsftpd.service → /lib/systemd/system/vsftpd.service.
+Processing triggers for man-db (2.10.2-1) ...
+root@yeeun-virtual-machine:/etc# nano vsftpd.conf
+root@yeeun-virtual-machine:/etc# cd /srv/ftp
+root@yeeun-virtual-machine:/srv/ftp# ls
+root@yeeun-virtual-machine:/srv/ftp# mkdir pub
+root@yeeun-virtual-machine:/srv/ftp# mkdir file1
+root@yeeun-virtual-machine:/srv/ftp# ls
+file1  pub
+root@yeeun-virtual-machine:/srv/ftp# ls -l
+합계 8
+drwxr-xr-x 2 root root 4096  6월 20 09:27 file1
+drwxr-xr-x 2 root root 4096  6월 20 09:26 pub
+root@yeeun-virtual-machine:/srv/ftp# chmod 777 file1
+root@yeeun-virtual-machine:/srv/ftp# ls -l
+합계 8
+drwxrwxrwx 2 root root 4096  6월 20 09:27 file1
+drwxr-xr-x 2 root root 4096  6월 20 09:26 pub
+root@yeeun-virtual-machine:/srv/ftp# cp /boot/vm* file1
+root@yeeun-virtual-machine:/srv/ftp# cd file1
+root@yeeun-virtual-machine:/srv/ftp/file1# ls
+vmlinuz  vmlinuz-5.19.0-32-generic  vmlinuz-5.19.0-35-generic  vmlinuz.old
+root@yeeun-virtual-machine:/srv/ftp/file1# systemctl restart vsftpd
+root@yeeun-virtual-machine:/srv/ftp/file1# systemctl enable vsftpd
+Synchronizing state of vsftpd.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable vsftpd
+root@yeeun-virtual-machine:/srv/ftp/file1# systemctl status vsftpd
+● vsftpd.service - vsftpd FTP server
+     Loaded: loaded (/lib/systemd/system/vsftpd.service; enabled; vendor preset>
+     Active: active (running) since Tue 2023-06-20 09:29:04 KST; 1min 4s ago
+   Main PID: 2723 (vsftpd)
+      Tasks: 1 (limit: 4575)
+     Memory: 1.2M
+        CPU: 9ms
+     CGroup: /system.slice/vsftpd.service
+             └─2723 /usr/sbin/vsftpd /etc/vsftpd.conf
+
+ 6월 20 09:29:04 yeeun-virtual-machine systemd[1]: Starting vsftpd FTP server...
+ 6월 20 09:29:04 yeeun-virtual-machine systemd[1]: Started vsftpd FTP server.
+root@yeeun-virtual-machine:/srv/ftp/file1# ufw allow ftp
+규칙이 추가되었습니다
+규칙이 추가되었습니다 (v6)
+root@yeeun-virtual-machine:/srv/ftp/file1# systemctl stop ufw
+ifroot@yeeun-virtual-machine:/srv/ftp/file1# ifconfig ens32
+ens32: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.217.128  netmask 255.255.255.0  broadcast 192.168.217.255
+        inet6 fe80::8cb:6fe5:415:44aa  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:8a:aa:45  txqueuelen 1000  (Ethernet)
+        RX packets 45968  bytes 68796930 (68.7 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4781  bytes 336334 (336.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+root@yeeun-virtual-machine:/srv/ftp/file1# 
