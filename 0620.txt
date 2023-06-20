@@ -150,3 +150,277 @@ ens32: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
 root@yeeun-virtual-machine:/srv/ftp/file1# 
+
+
+root@yeeun-virtual-machine:/srv/ftp/file1# systemctl status apache2
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor prese>
+    Drop-In: /usr/lib/systemd/system/apache2.service.d
+             └─apache2-systemd.conf
+     Active: active (running) since Tue 2023-06-20 09:20:56 KST; 50min ago
+   Main PID: 1068 (apache2)
+      Tasks: 55 (limit: 4575)
+     Memory: 7.5M
+        CPU: 270ms
+     CGroup: /system.slice/apache2.service
+             ├─1068 /usr/sbin/apache2 -k start
+             ├─1071 /usr/sbin/apache2 -k start
+             └─1072 /usr/sbin/apache2 -k start
+
+ 6월 20 09:20:55 yeeun-virtual-machine systemd[1]: Starting The Apache HTTP Ser>
+ 6월 20 09:20:56 yeeun-virtual-machine apachectl[1037]: AH00558: apache2: Could>
+ 6월 20 09:20:56 yeeun-virtual-machine systemd[1]: Started The Apache HTTP Serv>
+root@yeeun-virtual-machine:/srv/ftp/file1# systemctl mysql status
+Unknown command verb mysql.
+root@yeeun-virtual-machine:/srv/ftp/file1# systemctl status mysql
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset:>
+     Active: active (running) since Tue 2023-06-20 09:20:59 KST; 50min ago
+   Main PID: 1232 (mysqld)
+      Tasks: 27 (limit: 4575)
+     Memory: 189.4M
+        CPU: 3.763s
+     CGroup: /system.slice/mysql.service
+             └─1232 /usr/sbin/mysqld --daemonize --pid-file=/run/mysqld/mysqld.>
+
+ 6월 20 09:20:55 yeeun-virtual-machine systemd[1]: Starting MySQL Community Ser>
+ 6월 20 09:20:59 yeeun-virtual-machine systemd[1]: Started MySQL Community Serv>
+root@yeeun-virtual-machine:/srv/ftp/file1# cd
+root@yeeun-virtual-machine:~# cd /var/www/html
+root@yeeun-virtual-machine:/var/www/html# ls
+01.html  04.html  07.html  10.html  13.html  16.html  19.html  22.html
+02.html  05.html  08.html  11.html  14.html  17.html  20.html  23.html
+03.html  06.html  09.html  12.html  15.html  18.html  21.html  index.html
+root@yeeun-virtual-machine:/var/www/html# http://192.168.217.128
+bash: http://192.168.217.128: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:/var/www/html# 
+
+
+root@yeeun-virtual-machine:/var/www/html# nano phpinfo.php
+root@yeeun-virtual-machine:/var/www/html# ifconfig
+ens32: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.217.128  netmask 255.255.255.0  broadcast 192.168.217.255
+        inet6 fe80::8cb:6fe5:415:44aa  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:8a:aa:45  txqueuelen 1000  (Ethernet)
+        RX packets 47269  bytes 69816991 (69.8 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 5065  bytes 358043 (358.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 176  bytes 16610 (16.6 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 176  bytes 16610 (16.6 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+root@yeeun-virtual-machine:/var/www/html# systemctl restart apache2
+root@yeeun-virtual-machine:/var/www/html# apt-get -y install php
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+다음의 추가 패키지가 설치될 것입니다 :
+  libapache2-mod-php7.2 libargon2-0 php7.2 php7.2-cli php7.2-json
+  php7.2-opcache php7.2-readline
+제안하는 패키지:
+  php-pear
+다음 새 패키지를 설치할 것입니다:
+  libapache2-mod-php7.2 libargon2-0 php php7.2 php7.2-cli php7.2-json
+  php7.2-opcache php7.2-readline
+0개 업그레이드, 8개 새로 설치, 0개 제거 및 10개 업그레이드 안 함.
+2,990 k바이트 아카이브를 받아야 합니다.
+이 작업 후 10.5 M바이트의 디스크 공간을 더 사용하게 됩니다.
+받기:1 http://mirror.kakao.com/ubuntu bionic/main amd64 libargon2-0 amd64 0~20161029-1.1 [19.9 kB]
+받기:2 http://mirror.kakao.com/ubuntu bionic/main amd64 php all 1:7.2+60ubuntu1 [3,084 B]
+받기:3 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 php7.2-json amd64 7.2.24-0ubuntu0.18.04.17 [18.9 kB]
+받기:4 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 php7.2-opcache amd64 7.2.24-0ubuntu0.18.04.17 [166 kB]
+받기:5 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 php7.2-readline amd64 7.2.24-0ubuntu0.18.04.17 [12.2 kB]
+받기:6 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 php7.2-cli amd64 7.2.24-0ubuntu0.18.04.17 [1,410 kB]
+받기:7 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libapache2-mod-php7.2 amd64 7.2.24-0ubuntu0.18.04.17 [1,352 kB]
+받기:8 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 php7.2 all 7.2.24-0ubuntu0.18.04.17 [9,248 B]
+내려받기 2,990 k바이트, 소요시간 4초 (747 k바이트/초)
+Selecting previously unselected package libargon2-0:amd64.
+(데이터베이스 읽는중 ...현재 204018개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack .../0-libargon2-0_0~20161029-1.1_amd64.deb ...
+Unpacking libargon2-0:amd64 (0~20161029-1.1) ...
+Selecting previously unselected package php7.2-json.
+Preparing to unpack .../1-php7.2-json_7.2.24-0ubuntu0.18.04.17_amd64.deb ...
+Unpacking php7.2-json (7.2.24-0ubuntu0.18.04.17) ...
+Selecting previously unselected package php7.2-opcache.
+Preparing to unpack .../2-php7.2-opcache_7.2.24-0ubuntu0.18.04.17_amd64.deb ...
+Unpacking php7.2-opcache (7.2.24-0ubuntu0.18.04.17) ...
+Selecting previously unselected package php7.2-readline.
+Preparing to unpack .../3-php7.2-readline_7.2.24-0ubuntu0.18.04.17_amd64.deb ...
+Unpacking php7.2-readline (7.2.24-0ubuntu0.18.04.17) ...
+Selecting previously unselected package php7.2-cli.
+Preparing to unpack .../4-php7.2-cli_7.2.24-0ubuntu0.18.04.17_amd64.deb ...
+Unpacking php7.2-cli (7.2.24-0ubuntu0.18.04.17) ...
+Selecting previously unselected package libapache2-mod-php7.2.
+Preparing to unpack .../5-libapache2-mod-php7.2_7.2.24-0ubuntu0.18.04.17_amd64.deb ...
+Unpacking libapache2-mod-php7.2 (7.2.24-0ubuntu0.18.04.17) ...
+Selecting previously unselected package php7.2.
+Preparing to unpack .../6-php7.2_7.2.24-0ubuntu0.18.04.17_all.deb ...
+Unpacking php7.2 (7.2.24-0ubuntu0.18.04.17) ...
+Selecting previously unselected package php.
+Preparing to unpack .../7-php_1%3a7.2+60ubuntu1_all.deb ...
+Unpacking php (1:7.2+60ubuntu1) ...
+php7.2-opcache (7.2.24-0ubuntu0.18.04.17) 설정하는 중입니다 ...
+
+Creating config file /etc/php/7.2/mods-available/opcache.ini with new version
+libargon2-0:amd64 (0~20161029-1.1) 설정하는 중입니다 ...
+php7.2-json (7.2.24-0ubuntu0.18.04.17) 설정하는 중입니다 ...
+
+Creating config file /etc/php/7.2/mods-available/json.ini with new version
+php7.2-readline (7.2.24-0ubuntu0.18.04.17) 설정하는 중입니다 ...
+
+Creating config file /etc/php/7.2/mods-available/readline.ini with new version
+php7.2-cli (7.2.24-0ubuntu0.18.04.17) 설정하는 중입니다 ...
+update-alternatives: using /usr/bin/php7.2 to provide /usr/bin/php (php) in auto mode
+update-alternatives: using /usr/bin/phar7.2 to provide /usr/bin/phar (phar) in auto mode
+update-alternatives: using /usr/bin/phar.phar7.2 to provide /usr/bin/phar.phar (phar.phar) in auto mode
+
+Creating config file /etc/php/7.2/cli/php.ini with new version
+php_invoke: Enabled module pdo for cli sapi
+php_invoke: Enabled module ftp for cli sapi
+php_invoke: Enabled module sockets for cli sapi
+php_invoke: Enabled module sysvshm for cli sapi
+php_invoke: Enabled module sysvsem for cli sapi
+php_invoke: Enabled module iconv for cli sapi
+php_invoke: Enabled module calendar for cli sapi
+php_invoke: Enabled module fileinfo for cli sapi
+php_invoke: Enabled module phar for cli sapi
+php_invoke: Enabled module sysvmsg for cli sapi
+php_invoke: Enabled module gettext for cli sapi
+php_invoke: Enabled module shmop for cli sapi
+php_invoke: Enabled module posix for cli sapi
+php_invoke: Enabled module ctype for cli sapi
+php_invoke: Enabled module tokenizer for cli sapi
+php_invoke: Enabled module exif for cli sapi
+libapache2-mod-php7.2 (7.2.24-0ubuntu0.18.04.17) 설정하는 중입니다 ...
+
+Creating config file /etc/php/7.2/apache2/php.ini with new version
+php_invoke: Enabled module pdo for apache2 sapi
+php_invoke: Enabled module ftp for apache2 sapi
+php_invoke: Enabled module sockets for apache2 sapi
+php_invoke: Enabled module sysvshm for apache2 sapi
+php_invoke: Enabled module sysvsem for apache2 sapi
+php_invoke: Enabled module iconv for apache2 sapi
+php_invoke: Enabled module calendar for apache2 sapi
+php_invoke: Enabled module fileinfo for apache2 sapi
+php_invoke: Enabled module phar for apache2 sapi
+php_invoke: Enabled module sysvmsg for apache2 sapi
+php_invoke: Enabled module gettext for apache2 sapi
+php_invoke: Enabled module shmop for apache2 sapi
+php_invoke: Enabled module posix for apache2 sapi
+php_invoke: Enabled module ctype for apache2 sapi
+php_invoke: Enabled module tokenizer for apache2 sapi
+php_invoke: Enabled module exif for apache2 sapi
+Module mpm_event disabled.
+Enabling module mpm_prefork.
+apache2_switch_mpm Switch to prefork
+apache2_invoke: Enable module php7.2
+php7.2 (7.2.24-0ubuntu0.18.04.17) 설정하는 중입니다 ...
+php (1:7.2+60ubuntu1) 설정하는 중입니다 ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+root@yeeun-virtual-machine:/var/www/html# systemctl restart apache2
+root@yeeun-virtual-machine:/var/www/html# chmod 777 xe
+root@yeeun-virtual-machine:/var/www/html# ls -s
+합계 112
+ 4 01.html   4 06.html   4 11.html   4 16.html   4 21.html       4 xe
+ 4 02.html   4 07.html   4 12.html   4 17.html   4 22.html
+ 4 03.html   4 08.html   4 13.html   4 18.html   4 23.html
+ 4 04.html   4 09.html   4 14.html   4 19.html  12 index.html
+ 4 05.html   4 10.html   4 15.html   4 20.html   4 phpinfo.php
+root@yeeun-virtual-machine:/var/www/html# ls
+01.html  05.html  09.html  13.html  17.html  21.html     phpinfo.php
+02.html  06.html  10.html  14.html  18.html  22.html     xe
+03.html  07.html  11.html  15.html  19.html  23.html
+04.html  08.html  12.html  16.html  20.html  index.html
+root@yeeun-virtual-machine:/var/www/html# cd xe/modules
+root@yeeun-virtual-machine:/var/www/html/xe/modules# ls
+addon         comment        file                layout   page   session
+admin         communication  importer            member   point  spamfilter
+adminlogging  counter        install             menu     poll   tag
+autoinstall   document       integration_search  message  rss    trash
+board         editor         krzip               module   seo    widget
+root@yeeun-virtual-machine:/var/www/html/xe/modules# mysql -u root
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 2
+Server version: 5.7.42-0ubuntu0.18.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> grant all on xe08.* to xeUser@localhost identified by '1234';
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+mysql> exit
+Bye
+root@yeeun-virtual-machine:/var/www/html/xe/modules# mysql -u xeUser -p1234
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 3
+Server version: 5.7.42-0ubuntu0.18.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database xeDB;
+ERROR 1044 (42000): Access denied for user 'xeUser'@'localhost' to database 'xeDB'
+mysql> exit
+Bye
+root@yeeun-virtual-machine:/var/www/html/xe/modules# chmod 777 xe
+chmod: 'xe'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:/var/www/html/xe/modules# cd ../
+root@yeeun-virtual-machine:/var/www/html/xe# cd ../
+root@yeeun-virtual-machine:/var/www/html# ls
+01.html  05.html  09.html  13.html  17.html  21.html     phpinfo.php
+02.html  06.html  10.html  14.html  18.html  22.html     xe
+03.html  07.html  11.html  15.html  19.html  23.html
+04.html  08.html  12.html  16.html  20.html  index.html
+root@yeeun-virtual-machine:/var/www/html# chmod 777 xe
+root@yeeun-virtual-machine:/var/www/html# cd /xe/modules/
+bash: cd: /xe/modules/: 그런 파일이나 디렉터리가 없습니다
+root@yeeun-virtual-machine:/var/www/html# cd xe/modules/
+root@yeeun-virtual-machine:/var/www/html/xe/modules# ls
+addon         comment        file                layout   page   session
+admin         communication  importer            member   point  spamfilter
+adminlogging  counter        install             menu     poll   tag
+autoinstall   document       integration_search  message  rss    trash
+board         editor         krzip               module   seo    widget
+root@yeeun-virtual-machine:/var/www/html/xe/modules# mysql -u xeUser -p1234
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 4
+Server version: 5.7.42-0ubuntu0.18.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database xeDB;
+ERROR 1044 (42000): Access denied for user 'xeUser'@'localhost' to database 'xeDB'
+mysql> exit
+Bye
+root@yeeun-virtual-machine:/var/www/html/xe/modules# ph install.php
+ph: 명령을 찾을 수 없습니다
+root@yeeun-virtual-machine:/var/www/html/xe/modules# php install.php
+Could not open input file: install.php
+root@yeeun-virtual-machine:/var/www/html/xe/modules# 
